@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portafolio de Brayan Borja: Ingeniería de Sistemas, desarrollo de software, bases de datos y análisis de datos."
+    />
+    <meta name="theme-color" content="#08101f" />
+    <meta property="og:title" content="Brayan Borja | Ingeniería de Sistemas" />
+    <meta
+      property="og:description"
+      content="Proyectos de software, bases de datos y diseño de soluciones digitales."
+    />
+    <meta property="og:type" content="website" />
+    <title>Brayan Borja | Ingeniería de Sistemas</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header" data-header>
+      <div class="container nav-wrap">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio">
+          <span class="brand-mark" aria-hidden="true">BB</span>
+          <span>Brayan Borja</span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Navegación principal">
+          <a href="#sobre-mi">Sobre mí</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#habilidades">Habilidades</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="icon-button" type="button" data-theme-toggle aria-label="Cambiar a tema claro">
+            <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+            </svg>
+          </button>
+          <button
+            class="menu-button"
+            type="button"
+            data-menu-button
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <span class="sr-only">Abrir menú</span>
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" data-mobile-menu aria-label="Navegación móvil">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <section class="hero" id="inicio">
+        <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <div class="eyebrow"><span></span> Ingeniería de Sistemas · Lima, Perú</div>
+            <h1>Construyo soluciones digitales <em>claras y funcionales.</em></h1>
+            <p class="hero-lead">
+              Soy Brayan. Me interesa transformar necesidades reales en software bien organizado,
+              bases de datos confiables y experiencias fáciles de usar.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#proyectos">
+                Ver proyectos
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6"></path>
+                </svg>
+              </a>
+              <a
+                class="button button-secondary"
+                href="https://github.com/thebrayan202"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7A5.4 5.4 0 0 0 19.4 4 5 5 0 0 0 19.3.5S18.2.1 15 1.8a13.4 13.4 0 0 0-7 0C4.8.1 3.7.5 3.7.5A5 5 0 0 0 3.6 4a5.4 5.4 0 0 0-1.4 3.7c0 5.3 3.5 6.5 6.8 7A4.8 4.8 0 0 0 8 18v4M8 19c-3 .9-3-1.5-4-2"></path>
+                </svg>
+                GitHub
+              </a>
+            </div>
+            <div class="hero-note">
+              <span class="status-dot" aria-hidden="true"></span>
+              Disponible para colaborar en proyectos y oportunidades profesionales
+            </div>
+          </div>
+
+          <div class="profile-panel reveal" data-delay="120">
+            <div class="panel-topbar">
+              <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              <span>perfil.json</span>
+              <span class="panel-state">activo</span>
+            </div>
+            <div class="code-card" aria-label="Resumen profesional">
+              <div><span class="line-number">01</span><span class="code-key">"nombre"</span>: <span class="code-value">"Brayan Borja"</span>,</div>
+              <div><span class="line-number">02</span><span class="code-key">"área"</span>: <span class="code-value">"Ingeniería de Sistemas"</span>,</div>
+              <div><span class="line-number">03</span><span class="code-key">"enfoque"</span>: [</div>
+              <div><span class="line-number">04</span>&nbsp;&nbsp;<span class="code-value">"Desarrollo de software"</span>,</div>
+              <div><span class="line-number">05</span>&nbsp;&nbsp;<span class="code-value">"Datos y automatización"</span>,</div>
+              <div><span class="line-number">06</span>&nbsp;&nbsp;<span class="code-value">"Diseño de soluciones"</span></div>
+              <div><span class="line-number">07</span>],</div>
+              <div><span class="line-number">08</span><span class="code-key">"principio"</span>: <span class="code-value">"Aprender, construir, mejorar"</span></div>
+            </div>
+            <div class="panel-footer">
+              <div>
+                <span>ENFOQUE ACTUAL</span>
+                <strong>Datos + Backend</strong>
+              </div>
+              <div class="signal" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#sobre-mi" aria-label="Continuar a la sección Sobre mí">
+          <span>Conoce mi trabajo</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"></path></svg>
+        </a>
+      </section>
+
+      <section class="section" id="sobre-mi">
+        <div class="container about-grid">
+          <div class="section-heading reveal">
+            <span class="section-number">01</span>
+            <p class="section-kicker">Sobre mí</p>
+            <h2>Tecnología con propósito y atención al detalle.</h2>
+          </div>
+          <div class="about-content reveal" data-delay="100">
+            <p class="about-main">
+              Disfruto entender cómo funciona un proceso antes de escribir una sola línea de código.
+              Esa mirada me ayuda a crear soluciones simples de mantener y cómodas para quien las usa.
+            </p>
+            <p>
+              Mi trabajo combina programación orientada a objetos, modelado de bases de datos y
+              diseño de interfaces. También estoy profundizando en SQL, Power BI y herramientas
+              para convertir datos en información útil.
+            </p>
+            <div class="principles">
+              <article>
+                <span>01</span>
+                <h3>Entender</h3>
+                <p>Primero el problema, luego la herramienta.</p>
+              </article>
+              <article>
+                <span>02</span>
+                <h3>Construir</h3>
+                <p>Estructura clara, lógica consistente y buen criterio.</p>
+              </article>
+              <article>
+                <span>03</span>
+                <h3>Mejorar</h3>
+                <p>Probar, escuchar y corregir con intención.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section projects-section" id="proyectos">
+        <div class="container">
+          <div class="section-heading section-heading-row reveal">
+            <div>
+              <span class="section-number">02</span>
+              <p class="section-kicker">Proyectos seleccionados</p>
+              <h2>Trabajo que refleja mi forma de resolver.</h2>
+            </div>
+            <p class="heading-note">Una selección de proyectos académicos desarrollados con objetivos, decisiones y resultados concretos.</p>
+          </div>
+
+          <div class="projects-list">
+            <article class="project-card reveal">
+              <div class="project-index">01</div>
+              <div class="project-visual lab-visual" aria-hidden="true">
+                <div class="mock-window">
+                  <div class="mock-sidebar"><i></i><i></i><i></i><i></i></div>
+                  <div class="mock-content">
+                    <div class="mock-title"></div>
+                    <div class="mock-stats"><i></i><i></i><i></i></div>
+                    <div class="mock-table"><i></i><i></i><i></i><i></i></div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-copy">
+                <div class="project-meta">
+                  <span>Producto digital</span><span>Proyecto académico</span>
+                </div>
+                <h3>Lab Nutrition</h3>
+                <p>
+                  Prototipo de un sistema logístico para registrar marcas, modelos y compras. El
+                  flujo fue refinado mediante pruebas de usabilidad y un sistema de diseño coherente.
+                </p>
+                <ul class="project-points">
+                  <li>Flujos CRUD y validación de formularios</li>
+                  <li>Componentes reutilizables y variantes</li>
+                  <li>Análisis cualitativo y cuantitativo</li>
+                </ul>
+                <div class="tag-list"><span>Figma</span><span>UX/UI</span><span>Prototipado</span></div>
+                <button class="text-link" type="button" data-project="lab">
+                  Ver caso de estudio <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-card project-card-reverse reveal">
+              <div class="project-index">02</div>
+              <div class="project-visual nova-visual" aria-hidden="true">
+                <div class="terminal-window">
+                  <div class="terminal-bar"><span></span><span></span><span></span><b>TiendaNova.java</b></div>
+                  <div class="terminal-code">
+                    <p><i>class</i> TiendaNova {</p>
+                    <p>&nbsp;&nbsp;<em>private</em> Inventario stock;</p>
+                    <p>&nbsp;&nbsp;<em>private</em> List&lt;Venta&gt; ventas;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;&nbsp;<i>public void</i> registrar() {</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;validarDatos();</p>
+                    <p>&nbsp;&nbsp;}</p>
+                    <p>}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="project-copy">
+                <div class="project-meta">
+                  <span>Aplicación de escritorio</span><span>Proyecto académico</span>
+                </div>
+                <h3>Tienda Nova</h3>
+                <p>
+                  Sistema desarrollado en Java para organizar productos y operaciones de una tienda,
+                  aplicando clases, encapsulamiento y una separación clara de responsabilidades.
+                </p>
+                <ul class="project-points">
+                  <li>Arquitectura orientada a objetos</li>
+                  <li>Gestión de registros y validaciones</li>
+                  <li>Interfaz de escritorio organizada por módulos</li>
+                </ul>
+                <div class="tag-list"><span>Java</span><span>POO</span><span>NetBeans</span></div>
+                <button class="text-link" type="button" data-project="nova">
+                  Ver caso de estudio <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-index">03</div>
+              <div class="project-visual data-visual" aria-hidden="true">
+                <div class="schema-grid">
+                  <div class="entity entity-one"><strong>CLIENTE</strong><span>id_cliente</span><span>nombre</span><span>correo</span></div>
+                  <div class="entity entity-two"><strong>VENTA</strong><span>id_venta</span><span>fecha</span><span>total</span></div>
+                  <div class="entity entity-three"><strong>PRODUCTO</strong><span>id_producto</span><span>nombre</span><span>stock</span></div>
+                  <svg viewBox="0 0 500 280"><path d="M142 79H245M245 79v125M245 204h107"/><circle cx="245" cy="79" r="4"/><circle cx="245" cy="204" r="4"/></svg>
+                </div>
+              </div>
+              <div class="project-copy">
+                <div class="project-meta">
+                  <span>Bases de datos</span><span>Proyecto académico</span>
+                </div>
+                <h3>Modelo de datos comercial</h3>
+                <p>
+                  Diseño de una base de datos relacional para controlar clientes, productos y ventas,
+                  desde el modelo entidad-relación hasta consultas SQL de uso operativo.
+                </p>
+                <ul class="project-points">
+                  <li>Modelo entidad-relación y reglas de negocio</li>
+                  <li>Normalización hasta tercera forma normal</li>
+                  <li>Consultas, relaciones y consistencia de datos</li>
+                </ul>
+                <div class="tag-list"><span>SQL</span><span>3FN</span><span>Modelado</span></div>
+                <button class="text-link" type="button" data-project="data">
+                  Ver caso de estudio <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section skills-section" id="habilidades">
+        <div class="container skills-grid">
+          <div class="section-heading reveal">
+            <span class="section-number">03</span>
+            <p class="section-kicker">Habilidades</p>
+            <h2>Herramientas que uso para llevar una idea a la práctica.</h2>
+            <p class="skills-intro">
+              Me importa más entender bien los fundamentos que coleccionar tecnologías. Este es el
+              conjunto con el que trabajo y sigo profundizando.
+            </p>
+          </div>
+          <div class="skill-groups reveal" data-delay="100">
+            <article>
+              <div class="skill-icon">&lt;/&gt;</div>
+              <div>
+                <span>Desarrollo</span>
+                <h3>Java · HTML · CSS · JavaScript</h3>
+                <p>Programación orientada a objetos, lógica y construcción de interfaces web.</p>
+              </div>
+            </article>
+            <article>
+              <div class="skill-icon">DB</div>
+              <div>
+                <span>Datos</span>
+                <h3>SQL · Power BI · Excel</h3>
+                <p>Modelado relacional, consultas, limpieza y visualización de información.</p>
+              </div>
+            </article>
+            <article>
+              <div class="skill-icon">UI</div>
+              <div>
+                <span>Producto</span>
+                <h3>Figma · UX/UI · Prototipado</h3>
+                <p>Flujos, componentes, pruebas de usabilidad y sistemas de diseño.</p>
+              </div>
+            </article>
+            <article>
+              <div class="skill-icon">01</div>
+              <div>
+                <span>Forma de trabajo</span>
+                <h3>Git · GitHub · UML</h3>
+                <p>Versionado, documentación y comunicación visual de soluciones.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section focus-section">
+        <div class="container focus-card reveal">
+          <div>
+            <span class="section-number">04</span>
+            <p class="section-kicker">En qué estoy trabajando</p>
+            <h2>Una base sólida para crecer en datos y desarrollo.</h2>
+          </div>
+          <div class="focus-track">
+            <div class="focus-item">
+              <span>Ahora</span>
+              <strong>Fortalecer SQL y Java</strong>
+              <p>Resolver problemas con mejor estructura y criterio técnico.</p>
+            </div>
+            <div class="focus-item">
+              <span>Siguiente</span>
+              <strong>Proyectos con datos reales</strong>
+              <p>Crear análisis reproducibles y dashboards orientados a decisiones.</p>
+            </div>
+            <div class="focus-item">
+              <span>Dirección</span>
+              <strong>Datos + Backend</strong>
+              <p>Construir sistemas confiables que conecten procesos e información.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contacto">
+        <div class="container contact-card reveal">
+          <div class="contact-orbit" aria-hidden="true"><span></span><span></span></div>
+          <p class="section-kicker">Hablemos</p>
+          <h2>¿Tienes una idea o una oportunidad en la que pueda aportar?</h2>
+          <p>Estoy abierto a colaborar, aprender y construir proyectos que resuelvan problemas reales.</p>
+          <a
+            class="button button-primary"
+            href="https://github.com/thebrayan202"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Visitar mi GitHub
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand" href="#inicio"><span class="brand-mark">BB</span><span>Brayan Borja</span></a>
+        <p>Diseñado y desarrollado con intención.</p>
+        <p>© <span data-year></span> · Lima, Perú</p>
+      </div>
+    </footer>
+
+    <dialog class="project-dialog" data-project-dialog aria-labelledby="dialog-title">
+      <div class="dialog-header">
+        <span data-dialog-type>Proyecto académico</span>
+        <button class="icon-button" type="button" data-dialog-close aria-label="Cerrar detalles">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"></path></svg>
+        </button>
+      </div>
+      <div class="dialog-content">
+        <p class="section-kicker">Caso de estudio</p>
+        <h2 id="dialog-title" data-dialog-title></h2>
+        <div class="dialog-grid">
+          <section><span>El reto</span><p data-dialog-challenge></p></section>
+          <section><span>Mi enfoque</span><p data-dialog-approach></p></section>
+          <section><span>Lo aprendido</span><p data-dialog-learning></p></section>
+        </div>
+        <div class="tag-list" data-dialog-tags></div>
+      </div>
+    </dialog>
+  </body>
+</html>
