@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Caso de estudio y bitácora de proyecto de Brayan Borja." />
+    <meta name="theme-color" content="#08101f" />
+    <title>Proyecto | Brayan Borja</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="project.js" defer></script>
+  </head>
+  <body class="project-page">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header scrolled">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html#proyectos" aria-label="Volver al portafolio">
+          <span class="brand-mark" aria-hidden="true">BB</span>
+          <span>Brayan Borja</span>
+        </a>
+        <div class="project-nav-actions">
+          <a class="back-link" href="index.html#proyectos">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>
+            Todos los proyectos
+          </a>
+          <button class="icon-button" type="button" data-theme-toggle aria-label="Cambiar a tema claro">
+            <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path></svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="case-hero" data-case-theme>
+        <div class="container">
+          <div class="case-hero-grid">
+            <div class="case-hero-copy">
+              <p class="section-kicker" data-project-type></p>
+              <h1 data-project-title></h1>
+              <p class="case-lead" data-project-summary></p>
+              <div class="tag-list" data-project-tags></div>
+            </div>
+            <div class="case-facts" data-project-facts></div>
+          </div>
+          <a class="case-cover" data-project-cover-link target="_blank" rel="noreferrer">
+            <img data-project-cover alt="" />
+            <span>Haz clic para ampliar la imagen</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section case-overview">
+        <div class="container">
+          <div class="case-section-heading">
+            <span class="section-number">01</span>
+            <div><p class="section-kicker">Descripción general</p><h2>El proyecto explicado con claridad.</h2></div>
+          </div>
+          <p class="case-intro" data-project-intro></p>
+          <div class="case-info-grid">
+            <article><span>El problema</span><h3>¿Qué necesitaba resolverse?</h3><p data-project-challenge></p></article>
+            <article><span>La solución</span><h3>¿Qué construí?</h3><p data-project-solution></p></article>
+            <article><span>Mi participación</span><h3>¿Cuál fue mi aporte?</h3><p data-project-role></p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-gallery-section">
+        <div class="container">
+          <div class="case-section-heading">
+            <span class="section-number">02</span>
+            <div><p class="section-kicker">Galería del proyecto</p><h2>Vistas amplias del trabajo.</h2></div>
+          </div>
+          <div class="case-gallery" data-project-gallery></div>
+        </div>
+      </section>
+
+      <section class="section case-process-section">
+        <div class="container case-process-grid">
+          <div class="case-section-heading case-heading-sticky">
+            <span class="section-number">03</span>
+            <div>
+              <p class="section-kicker">Bitácora</p>
+              <h2>Cómo evolucionó el proyecto.</h2>
+              <p>La bitácora registra el objetivo de cada etapa, las decisiones tomadas y el entregable producido.</p>
+            </div>
+          </div>
+          <div class="case-timeline" data-project-log></div>
+        </div>
+      </section>
+
+      <section class="section case-learning-section">
+        <div class="container">
+          <div class="case-section-heading">
+            <span class="section-number">04</span>
+            <div><p class="section-kicker">Decisiones y aprendizajes</p><h2>Lo que este proyecto me enseñó.</h2></div>
+          </div>
+          <div class="learning-grid" data-project-learnings></div>
+        </div>
+      </section>
+
+      <section class="section case-next-section">
+        <div class="container case-next-card">
+          <div><p class="section-kicker">Siguiente caso de estudio</p><h2 data-next-title></h2></div>
+          <a class="button button-primary" data-next-link>Ver siguiente proyecto <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand" href="index.html"><span class="brand-mark">BB</span><span>Brayan Borja</span></a>
+        <p>Proyecto documentado con una bitácora de trabajo.</p>
+        <p>© <span data-year></span> · Lima, Perú</p>
+      </div>
+    </footer>
+  </body>
+</html>
