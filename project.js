@@ -135,7 +135,7 @@ document.querySelector("[data-project-facts]").replaceChildren(...project.facts.
 
 document.querySelector("[data-project-gallery]").replaceChildren(...project.gallery.map((item,index) => {
   const figure = document.createElement("figure");
-  const link = document.createElement("a"); link.href = item.src; link.target = "_blank"; link.rel = "noreferrer";
+  const link = document.createElement("a"); link.href = item.src; link.target = "_blank"; link.rel = "noopener noreferrer";
   const image = document.createElement("img"); image.src = item.src; image.alt = `${item.title} de ${project.title}`; image.loading = index ? "lazy" : "eager";
   const badge = document.createElement("span"); badge.textContent = "Ampliar imagen";
   link.append(image,badge);
