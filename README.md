@@ -7,7 +7,9 @@ Portafolio personal enfocado en Ingeniería de Sistemas, desarrollo de software,
 - Diseño responsive para escritorio, tablet y móvil.
 - Tema claro y oscuro con preferencia persistente.
 - Navegación accesible y animaciones respetuosas con `prefers-reduced-motion`.
-- Casos de estudio interactivos para los proyectos seleccionados.
+- Casos de estudio completos con imágenes ampliables y bitácoras por etapas.
+- Galería vectorial propia para Lab Nutrition, Tienda Nova y el modelo de datos comercial.
+- Contacto directo por WhatsApp.
 - Sitio estático sin dependencias ni proceso de compilación.
 
 ## Ejecutar localmente
@@ -25,8 +27,17 @@ Luego visita `http://localhost:8000`.
 ```text
 .
 ├── index.html
+├── proyecto.html
 ├── styles.css
 ├── script.js
+├── project.js
+├── assets/
+│   ├── lab-dashboard.svg
+│   ├── lab-prototype.svg
+│   ├── nova-system.svg
+│   ├── nova-uml.svg
+│   ├── data-model.svg
+│   └── data-sql.svg
 └── favicon.svg
 ```
 
