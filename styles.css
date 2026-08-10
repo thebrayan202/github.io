@@ -271,6 +271,7 @@ svg {
   border-radius: 13px;
   font-size: 0.9rem;
   font-weight: 750;
+  cursor: pointer;
   transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, border-color 160ms ease;
 }
 
@@ -466,8 +467,9 @@ svg {
 .contact-details { padding: 9px 0 9px 28px; border-left: 1px solid var(--line-strong); }
 .contact-details-label { margin: 0 0 14px; color: var(--text-faint); font: .6rem var(--mono); letter-spacing: .08em; text-transform: uppercase; }
 .contact-detail { display: grid; grid-template-columns: 42px minmax(0, 1fr) auto; gap: 13px; align-items: center; padding: 15px 0; border-bottom: 1px solid var(--line); transition: color 160ms ease, transform 160ms ease; }
+.contact-details button.contact-detail { width: 100%; border-width: 0 0 1px; border-color: var(--line); border-radius: 0; background: transparent; color: inherit; text-align: left; cursor: pointer; }
 .contact-detail:last-child { border-bottom: 0; }
-a.contact-detail:hover { color: var(--accent); transform: translateX(3px); }
+a.contact-detail:hover, button.contact-detail:hover, button.contact-detail.revealed { color: var(--accent); transform: translateX(3px); }
 .contact-detail-icon { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid var(--line-strong); border-radius: 11px; background: var(--surface); color: var(--accent); font: .6rem var(--mono); font-weight: 750; }
 .contact-detail > span:nth-child(2) { min-width: 0; }
 .contact-detail small { display: block; color: var(--text-faint); font: .58rem var(--mono); letter-spacing: .06em; text-transform: uppercase; }
@@ -494,6 +496,8 @@ a.contact-detail:hover { color: var(--accent); transform: translateX(3px); }
 .dialog-content > .tag-list { margin-top: 31px; }
 
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity 650ms ease, transform 650ms ease; transition-delay: var(--delay, 0ms); }
+.reveal[data-delay="100"] { --delay: 100ms; }
+.reveal[data-delay="120"] { --delay: 120ms; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
