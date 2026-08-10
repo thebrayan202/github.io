@@ -159,44 +159,53 @@ const projects = {
       {label:"SUSALUD", title:"Registro Nacional de IPRESS", text:"Ubicación oficial de establecimientos de salud públicos, privados y mixtos del país.", url:"https://datos.susalud.gob.pe/dataset/registro-nacional-de-ipress-renipress"},
       {label:"DIGEMID", title:"Regulación de establecimientos", text:"Requisito de autorización sanitaria y contexto normativo para farmacias y boticas.", url:"https://www.digemid.minsa.gob.pe/webDigemid/establecimientos/"}
     ],
-    next: "citas"
+    next: "rumbo"
   },
-  citas: {
-    type: "Aplicación web · Proyecto aplicado",
-    title: "CitaFácil",
-    summary: "Sistema responsive de reservas para consultar horarios disponibles, confirmar citas y reducir cruces en negocios que atienden por agenda.",
-    intro: "CitaFácil fue pensado para barberías, consultorios y otros servicios que coordinan horarios mediante mensajes. Cuando la agenda depende de conversaciones separadas, confirmar, reprogramar o cancelar consume tiempo y puede producir cruces. El proyecto organiza ese proceso en un flujo simple y documenta las reglas necesarias para que la disponibilidad sea confiable.",
-    challenge: "El cliente necesita reservar rápido, mientras el negocio debe evitar dobles reservas, respetar la duración de cada servicio y mantener claridad sobre citas pendientes, confirmadas, completadas o canceladas.",
-    solution: "Un prototipo web responsive con selección de servicio, profesional, fecha y hora; validación de disponibilidad; confirmación y panel diario. La propuesta incluye estados de cita, reprogramación y reglas para liberar horarios cancelados.",
-    role: "Analicé los actores y escenarios, definí reglas de agenda, diseñé el flujo responsive y la estructura de datos. También preparé validaciones de interfaz, estados vacíos, mensajes de error y casos de prueba para conflictos de horario.",
-    theme: "citas",
-    tags: ["HTML", "CSS", "JavaScript", "UX/UI", "Responsive"],
-    facts: [["4", "estados"], ["3", "roles"], ["7", "etapas documentadas"]],
-    cover: "assets/citas-calendar.svg",
+  rumbo: {
+    type: "Movilidad multimodal · Proyecto aplicado",
+    title: "Rumbo Perú",
+    summary: "Aplicación móvil para comparar rutas, duración y costo desde la ubicación actual usando transporte público, taxi por aplicativo, auto, bicicleta o caminata.",
+    intro: "Rumbo Perú nace de una situación cotidiana: saber llegar no siempre ayuda a elegir cómo conviene viajar. Una persona puede preferir la opción más rápida, la más económica o la que requiere menos transbordos. La propuesta reúne esas alternativas en una sola consulta, comienza por Lima y Callao y amplía la cobertura al resto del Perú únicamente cuando existen datos suficientes. Cada resultado indica si el costo proviene de una tarifa oficial, una estimación calculada o una consulta directa al proveedor.",
+    challenge: "Las rutas y los costos no tienen una sola fuente. El transporte público usa tarifas y recorridos oficiales; el taxi por aplicativo cambia según demanda, tránsito y disponibilidad; y el auto propio depende de distancia, rendimiento, combustible y peajes. Además, la cobertura de transporte público no es uniforme en todas las ciudades del Perú.",
+    solution: "Una app móvil con dos campos principales —origen y destino—, detección opcional de ubicación y un comparador ordenado por tiempo, costo o comodidad. OpenTripPlanner combina calles de OpenStreetMap con feeds GTFS disponibles; un servicio de costos añade tarifas públicas, combustible y peajes, mientras los precios dinámicos se confirman al abrir la app del proveedor.",
+    role: "Definí el alcance, los estados de cobertura y las reglas para diferenciar datos oficiales, estimados y dinámicos. Diseñé el flujo móvil, el modelo geoespacial, la estrategia de integración y los casos de prueba. También incorporé privacidad por defecto: la ubicación se usa durante la consulta y el historial solo se guarda con autorización.",
+    theme: "rumbo",
+    tags: ["Flutter", "FastAPI", "OpenTripPlanner", "GTFS", "PostGIS", "OpenStreetMap"],
+    facts: [["5", "medios de viaje"], ["6", "fuentes e integraciones"], ["8", "etapas documentadas"]],
+    cover: "assets/rumbo-comparador.svg",
     gallery: [
-      {src:"assets/citas-calendar.svg", title:"Agenda y panel diario", text:"Vista de horarios, próximas citas, estados y capacidad disponible para organizar la jornada."},
-      {src:"assets/citas-flow.svg", title:"Flujo de reserva responsive", text:"Secuencia para elegir servicio, profesional, horario y confirmar la cita con retroalimentación clara."}
+      {src:"assets/rumbo-comparador.svg", title:"Comparador de viaje", text:"Consulta sencilla desde la ubicación actual y alternativas que explican duración, costo, caminata, transbordos y vigencia del dato."},
+      {src:"assets/rumbo-arquitectura.svg", title:"Cobertura y arquitectura", text:"Proceso para combinar mapas, transporte público y costos sin ocultar cuándo una ciudad o un proveedor no tiene información disponible."}
     ],
     log: [
-      ["Etapa 01", "Usuarios y escenarios", "Se definieron tres actores: cliente, profesional y administrador. Para cada uno se identificaron tareas, información necesaria y posibles errores.", "Mapa de actores y escenarios de uso."],
-      ["Etapa 02", "Reglas de disponibilidad", "Se documentaron duración del servicio, horario laboral, descansos, anticipación mínima, cancelaciones y prohibición de reservas superpuestas.", "Matriz de reglas de agenda."],
-      ["Etapa 03", "Arquitectura de información", "Se organizaron servicios, profesionales, horarios y citas para que el flujo muestre solo opciones válidas en cada paso.", "Mapa del sitio y modelo conceptual."],
-      ["Etapa 04", "Diseño responsive", "Se priorizó la reserva desde celular con controles grandes, progreso visible y un resumen permanente antes de confirmar.", "Wireframes móvil y escritorio."],
-      ["Etapa 05", "Prototipo e interacciones", "Se definieron selección, retroceso, confirmación, reprogramación y cancelación, incluyendo estados de carga, vacío, éxito y error.", "Prototipo navegable y catálogo de estados."],
-      ["Etapa 06", "Validación funcional", "Se probaron horarios ocupados, fechas pasadas, cambios de profesional, cancelaciones y dos intentos de reserva sobre el mismo bloque.", "Casos de prueba y correcciones del flujo."],
-      ["Etapa 07", "Accesibilidad y evolución", "Se revisaron contraste, foco de teclado, etiquetas y mensajes. La hoja de ruta considera recordatorios, autenticación y una API para persistencia.", "Checklist de accesibilidad y hoja de ruta."],
+      ["Etapa 01", "Problema y usuario", "Se entrevistaron escenarios cotidianos: ir a estudiar, trabajar, realizar un trámite y viajar entre ciudades. La necesidad principal fue comparar opciones sin abrir varias aplicaciones.", "Mapa de necesidades, perfiles y decisiones de viaje."],
+      ["Etapa 02", "Cobertura realista", "Se separó Lima y Callao, donde existen fuentes específicas de transporte masivo, del resto del país. Si una ciudad no posee feed público suficiente, la app muestra cobertura parcial en lugar de fabricar una ruta.", "Matriz de cobertura por ciudad, modo y fuente."],
+      ["Etapa 03", "Inventario de datos", "Se documentaron ATU y Línea 1 para tarifas y servicios, GTFS para rutas y paraderos, OpenStreetMap para calles, Uber para precios consultados y Facilito para combustible.", "Catálogo de fuentes, responsables y fechas de actualización."],
+      ["Etapa 04", "Motor multimodal", "OpenTripPlanner combina tramos a pie y transporte público. OSRM calcula auto, bicicleta y caminata; PostGIS conserva paraderos, estaciones, zonas y resultados geográficos.", "Arquitectura técnica y contrato de respuestas de ruta."],
+      ["Etapa 05", "Modelo de costos", "El transporte público usa tarifas vigentes; el auto calcula distancia ÷ rendimiento × precio de combustible más peajes. El taxi por aplicativo se identifica como dinámico y se confirma en el proveedor.", "Reglas de costo, etiquetas de confianza y casos límite."],
+      ["Etapa 06", "Experiencia móvil", "El flujo se redujo a origen, destino y prioridad. Los resultados muestran primero la diferencia útil: cuánto demora, cuánto cuesta, cuánto se camina y cuántos cambios requiere.", "Prototipo en Flutter y sistema de componentes."],
+      ["Etapa 07", "Privacidad y seguridad", "La ubicación precisa se procesa para calcular la consulta y no se publica. Guardar casa, trabajo o historial es opcional, requiere consentimiento y utiliza almacenamiento cifrado.", "Modelo de amenazas, permisos y política de retención."],
+      ["Etapa 08", "Pruebas y monitoreo", "Se probaron ubicaciones sin GPS, destinos ambiguos, pérdida de conexión, tarifas vencidas y rutas fuera de cobertura. La interfaz explica el problema y permite cambiar de alternativa.", "Casos de prueba, estados de error y plan de actualización."],
     ],
     learnings: [
-      ["La disponibilidad es una regla", "Un calendario bonito no evita conflictos si el sistema no valida duración, bloqueos y superposición antes de confirmar."],
-      ["Diseñar también los errores", "Fechas no disponibles, cancelaciones y estados vacíos forman parte central del producto, no son excepciones menores."],
-      ["Menos pasos, más confianza", "Un resumen claro y retroalimentación inmediata permiten reservar con rapidez sin perder el control de la información."]
+      ["Comparar exige contexto", "La ruta más rápida puede ser costosa y la más barata puede exigir mucha caminata. La app debe mostrar el intercambio, no decidir silenciosamente por el usuario."],
+      ["La cobertura también es un dato", "Decir que una opción no está disponible es más responsable que completar el resultado con horarios o recorridos que no pueden verificarse."],
+      ["El costo tiene distintos niveles de certeza", "Una tarifa pública puede ser exacta, el combustible es una estimación y el taxi por aplicativo cambia al momento de pedirlo; cada valor necesita una etiqueta clara."]
+    ],
+    sources: [
+      {label:"ATU", title:"Tarifarios y datos abiertos de Lima y Callao", text:"Servicios, estaciones, tarifas y conjuntos de datos del Metropolitano y corredores complementarios.", url:"https://portal.atu.gob.pe/QR/"},
+      {label:"LÍNEA 1", title:"Tarifas oficiales del Metro de Lima", text:"Fuente de la tarifa adulta y medio pasaje vigente para los recorridos de la Línea 1.", url:"https://www.lineauno.pe/tarifas/"},
+      {label:"UBER", title:"Estimador oficial de precios", text:"Consulta de precio aproximado según origen, destino, duración, distancia y demanda al momento del viaje.", url:"https://www.uber.com/global/es/price-estimate/"},
+      {label:"OSINERGMIN", title:"Facilito: precios de combustibles", text:"Precios reportados por estación de servicio y departamento para estimar el costo del auto propio.", url:"https://www.facilito.gob.pe/facilito/pages/facilito/buscadorEESS.jsp"},
+      {label:"OPEN DATA", title:"OpenStreetMap y OSRM", text:"Red vial abierta y motor de rutas para auto, bicicleta y caminata en el territorio peruano.", url:"https://project-osrm.org/"},
+      {label:"GTFS / OTP", title:"Estándar y motor multimodal", text:"Modelo de rutas, paraderos, horarios y tarifas usado por OpenTripPlanner para construir itinerarios combinados.", url:"https://www.opentripplanner.org/"}
     ],
     next: "lab"
   }
 };
 
 const params = new URLSearchParams(window.location.search);
-const aliases = { finance: "farma" };
+const aliases = { finance: "farma", citas: "rumbo" };
 const requestedId = aliases[params.get("id")] || params.get("id");
 const id = projects[requestedId] ? requestedId : "lab";
 const project = projects[id];
