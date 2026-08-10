@@ -9,7 +9,7 @@ Portafolio profesional de Brayan Borja, enfocado en Ingeniería de Sistemas, des
 - Navegación accesible y animaciones respetuosas con `prefers-reduced-motion`.
 - Casos de estudio completos con imágenes ampliables y bitácoras por etapas.
 - Galería vectorial propia para seis casos de estudio académicos y aplicados.
-- Proyectos de inventario, analítica farmacéutica geoespacial y gestión de citas con bitácoras profesionales.
+- Proyectos de inventario, analítica farmacéutica geoespacial y movilidad multimodal con bitácoras profesionales.
 - Perfil profesional con formación, áreas de interés y disponibilidad.
 - Correo profesional protegido contra rastreadores básicos y sin número personal publicado.
 - Política de referencias restrictiva y Content Security Policy para limitar recursos no autorizados.
@@ -45,8 +45,8 @@ Luego visita `http://localhost:8000`.
 │   ├── stock-flow.svg
 │   ├── farma-dashboard.svg
 │   ├── farma-method.svg
-│   ├── citas-calendar.svg
-│   └── citas-flow.svg
+│   ├── rumbo-comparador.svg
+│   └── rumbo-arquitectura.svg
 └── favicon.svg
 ```
 
