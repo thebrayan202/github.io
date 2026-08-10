@@ -88,6 +88,101 @@ const projects = {
       ["Normalizar con propósito", "La normalización no es solo una regla académica: reduce errores y facilita las actualizaciones."],
       ["Probar también los datos", "Los registros de prueba ayudaron a detectar relaciones incompletas antes de dar el diseño por terminado."]
     ],
+    next: "stock"
+  },
+  stock: {
+    type: "Gestión operativa · Proyecto aplicado",
+    title: "StockPilot",
+    summary: "Sistema de inventario pensado para controlar movimientos, detectar faltantes y apoyar decisiones de reposición en un pequeño negocio.",
+    intro: "StockPilot parte de un problema común en comercios pequeños: el inventario suele controlarse en cuadernos o archivos separados y los errores aparecen cuando ya falta un producto. El proyecto plantea una solución trazable, con reglas de negocio, modelo de datos y un tablero operativo. Se trabajó con información ficticia para demostrar el flujo sin exponer datos de una empresa real.",
+    challenge: "Cuando las entradas, ventas y ajustes no quedan conectados, el stock mostrado deja de ser confiable. Esto provoca quiebres, compras urgentes, productos inmovilizados y poca claridad sobre quién realizó cada movimiento.",
+    solution: "Un prototipo técnico con catálogo de productos, proveedores, entradas, salidas, ajustes, stock mínimo y alertas. Cada movimiento actualiza existencias y conserva un historial; el dashboard resume productos críticos, rotación y compras sugeridas.",
+    role: "Definí el alcance, las reglas de inventario y los casos de uso; diseñé el modelo relacional, la interfaz operativa y las consultas para indicadores. También preparé datos ficticios, casos de prueba y una propuesta de evolución hacia una API y control por roles.",
+    theme: "stock",
+    tags: ["Java", "SQL", "Power BI", "Inventario", "Reglas de negocio"],
+    facts: [["6", "módulos"], ["8", "reglas clave"], ["7", "etapas documentadas"]],
+    cover: "assets/stock-dashboard.svg",
+    gallery: [
+      {src:"assets/stock-dashboard.svg", title:"Panel operativo de inventario", text:"Resumen de existencias, alertas de stock mínimo, movimientos recientes y productos que requieren reposición."},
+      {src:"assets/stock-flow.svg", title:"Flujo y arquitectura de datos", text:"Relación entre catálogo, movimientos, existencias y dashboard, con validaciones antes de actualizar el stock."}
+    ],
+    log: [
+      ["Etapa 01", "Contexto y alcance", "Se definió como usuario principal al responsable de almacén de un pequeño comercio y se limitó el alcance a inventario, movimientos y reposición.", "Documento de alcance, usuario y objetivos medibles."],
+      ["Etapa 02", "Reglas de negocio", "Se documentaron reglas para stock mínimo, entradas, salidas, ajustes, productos inactivos, cantidades válidas y movimientos que no pueden dejar existencias negativas.", "Matriz de ocho reglas y casos límite."],
+      ["Etapa 03", "Modelo de datos", "Se separaron productos, categorías, proveedores, usuarios y movimientos para conservar trazabilidad y evitar que el stock dependa de un dato manual aislado.", "Modelo relacional y diccionario de datos."],
+      ["Etapa 04", "Diseño del flujo", "Se organizaron las tareas críticas: registrar producto, recibir mercadería, registrar salida, revisar alertas y preparar una reposición.", "Mapa de navegación y wireframes operativos."],
+      ["Etapa 05", "Lógica y consultas", "Se planteó la actualización transaccional del stock y consultas para identificar faltantes, rotación, valorización y últimos movimientos.", "Pseudocódigo, consultas SQL y validaciones."],
+      ["Etapa 06", "Dashboard y alertas", "Se priorizaron indicadores accionables y se diseñó una alerta que explica qué producto falta, cuánto queda y cuál es la cantidad sugerida.", "Dashboard de control y criterios de alerta."],
+      ["Etapa 07", "Pruebas y mejoras", "Se probaron escenarios con datos ficticios: ingreso, venta, ajuste, duplicado y salida superior al stock disponible. Después se documentaron mejoras futuras.", "Casos de prueba, resultados y hoja de ruta."],
+    ],
+    learnings: [
+      ["El stock es un resultado", "La existencia confiable debe calcularse a partir de movimientos válidos y trazables, no depender de una cifra editada sin contexto."],
+      ["Una alerta debe orientar", "Mostrar un número en rojo no basta: una buena alerta explica el riesgo y propone la siguiente acción."],
+      ["Primero consistencia, luego análisis", "Los indicadores solo son útiles cuando las reglas de registro y el modelo de datos protegen la calidad de la información."]
+    ],
+    next: "finance"
+  },
+  finance: {
+    type: "Análisis de datos · Proyecto aplicado",
+    title: "MiPresupuesto",
+    summary: "Dashboard de finanzas personales que convierte ingresos y gastos de ejemplo en indicadores claros para planificar el mes y detectar desviaciones.",
+    intro: "MiPresupuesto responde a una necesidad cotidiana: muchas personas saben cuánto ganan, pero no pueden explicar con precisión en qué se va su dinero ni si llegarán a su meta mensual. El proyecto utiliza un conjunto de datos completamente ficticio, documenta su limpieza y construye un dashboard que compara presupuesto, gasto real, ahorro y categorías.",
+    challenge: "Los movimientos suelen tener descripciones distintas, categorías inconsistentes y fechas en formatos diferentes. Sin una estructura común, comparar meses o detectar un exceso requiere revisar cada registro manualmente.",
+    solution: "Un flujo de datos que estandariza movimientos, asigna categorías y alimenta un modelo de análisis. El dashboard presenta ingresos, gastos, ahorro, cumplimiento de presupuesto, evolución semanal y categorías con mayor desviación.",
+    role: "Definí las preguntas de análisis, preparé un dataset ficticio, documenté las reglas de limpieza y diseñé el modelo de indicadores. Después construí la jerarquía visual del dashboard y validé los resultados con cálculos independientes.",
+    theme: "finance",
+    tags: ["Power BI", "Excel", "SQL", "ETL", "Visualización"],
+    facts: [["4", "indicadores"], ["6", "categorías"], ["6", "etapas documentadas"]],
+    cover: "assets/finance-dashboard.svg",
+    gallery: [
+      {src:"assets/finance-dashboard.svg", title:"Dashboard mensual", text:"Indicadores de ingreso, gasto, ahorro y presupuesto, acompañados por tendencia y distribución por categoría."},
+      {src:"assets/finance-model.svg", title:"Proceso de preparación de datos", text:"Ruta desde los movimientos sin ordenar hasta una tabla limpia, un modelo analítico y medidas verificables."}
+    ],
+    log: [
+      ["Etapa 01", "Preguntas de análisis", "Se definieron las decisiones que debía facilitar el tablero: cuánto se gastó, cuánto se ahorró, dónde hubo excesos y cómo cambió el comportamiento durante el mes.", "Lista priorizada de preguntas e indicadores."],
+      ["Etapa 02", "Dataset seguro", "Se creó información ficticia con fechas, descripciones, categorías, medios de pago e importes, incluyendo errores controlados para probar la limpieza.", "Dataset de prueba sin datos financieros reales."],
+      ["Etapa 03", "Limpieza y transformación", "Se corrigieron formatos, categorías vacías, duplicados y signos de importes. Las reglas quedaron registradas para que el proceso pueda repetirse.", "Tabla limpia y bitácora de transformaciones."],
+      ["Etapa 04", "Modelo e indicadores", "Se separaron calendario, categorías y movimientos. Luego se definieron ingreso, gasto, ahorro y porcentaje de presupuesto utilizado.", "Modelo analítico y catálogo de medidas."],
+      ["Etapa 05", "Diseño del dashboard", "Se ordenó la información desde el resumen mensual hasta el detalle por categoría, usando color solo para señalar cumplimiento o riesgo.", "Dashboard de una página y guía visual."],
+      ["Etapa 06", "Validación y conclusiones", "Se compararon totales con cálculos independientes y se revisaron filtros, porcentajes y casos sin datos antes de redactar conclusiones accionables.", "Checklist de calidad y resumen de hallazgos."],
+    ],
+    learnings: [
+      ["La pregunta dirige el análisis", "Elegir primero la decisión que se quiere mejorar evita llenar el dashboard con gráficos que no conducen a una acción."],
+      ["Limpiar también es documentar", "Una transformación reproducible necesita explicar qué se cambió, por qué y cómo se verificó."],
+      ["Privacidad desde el origen", "Los datos ficticios permiten demostrar el análisis sin publicar información financiera personal ni identificadores sensibles."]
+    ],
+    next: "citas"
+  },
+  citas: {
+    type: "Aplicación web · Proyecto aplicado",
+    title: "CitaFácil",
+    summary: "Sistema responsive de reservas para consultar horarios disponibles, confirmar citas y reducir cruces en negocios que atienden por agenda.",
+    intro: "CitaFácil fue pensado para barberías, consultorios y otros servicios que coordinan horarios mediante mensajes. Cuando la agenda depende de conversaciones separadas, confirmar, reprogramar o cancelar consume tiempo y puede producir cruces. El proyecto organiza ese proceso en un flujo simple y documenta las reglas necesarias para que la disponibilidad sea confiable.",
+    challenge: "El cliente necesita reservar rápido, mientras el negocio debe evitar dobles reservas, respetar la duración de cada servicio y mantener claridad sobre citas pendientes, confirmadas, completadas o canceladas.",
+    solution: "Un prototipo web responsive con selección de servicio, profesional, fecha y hora; validación de disponibilidad; confirmación y panel diario. La propuesta incluye estados de cita, reprogramación y reglas para liberar horarios cancelados.",
+    role: "Analicé los actores y escenarios, definí reglas de agenda, diseñé el flujo responsive y la estructura de datos. También preparé validaciones de interfaz, estados vacíos, mensajes de error y casos de prueba para conflictos de horario.",
+    theme: "citas",
+    tags: ["HTML", "CSS", "JavaScript", "UX/UI", "Responsive"],
+    facts: [["4", "estados"], ["3", "roles"], ["7", "etapas documentadas"]],
+    cover: "assets/citas-calendar.svg",
+    gallery: [
+      {src:"assets/citas-calendar.svg", title:"Agenda y panel diario", text:"Vista de horarios, próximas citas, estados y capacidad disponible para organizar la jornada."},
+      {src:"assets/citas-flow.svg", title:"Flujo de reserva responsive", text:"Secuencia para elegir servicio, profesional, horario y confirmar la cita con retroalimentación clara."}
+    ],
+    log: [
+      ["Etapa 01", "Usuarios y escenarios", "Se definieron tres actores: cliente, profesional y administrador. Para cada uno se identificaron tareas, información necesaria y posibles errores.", "Mapa de actores y escenarios de uso."],
+      ["Etapa 02", "Reglas de disponibilidad", "Se documentaron duración del servicio, horario laboral, descansos, anticipación mínima, cancelaciones y prohibición de reservas superpuestas.", "Matriz de reglas de agenda."],
+      ["Etapa 03", "Arquitectura de información", "Se organizaron servicios, profesionales, horarios y citas para que el flujo muestre solo opciones válidas en cada paso.", "Mapa del sitio y modelo conceptual."],
+      ["Etapa 04", "Diseño responsive", "Se priorizó la reserva desde celular con controles grandes, progreso visible y un resumen permanente antes de confirmar.", "Wireframes móvil y escritorio."],
+      ["Etapa 05", "Prototipo e interacciones", "Se definieron selección, retroceso, confirmación, reprogramación y cancelación, incluyendo estados de carga, vacío, éxito y error.", "Prototipo navegable y catálogo de estados."],
+      ["Etapa 06", "Validación funcional", "Se probaron horarios ocupados, fechas pasadas, cambios de profesional, cancelaciones y dos intentos de reserva sobre el mismo bloque.", "Casos de prueba y correcciones del flujo."],
+      ["Etapa 07", "Accesibilidad y evolución", "Se revisaron contraste, foco de teclado, etiquetas y mensajes. La hoja de ruta considera recordatorios, autenticación y una API para persistencia.", "Checklist de accesibilidad y hoja de ruta."],
+    ],
+    learnings: [
+      ["La disponibilidad es una regla", "Un calendario bonito no evita conflictos si el sistema no valida duración, bloqueos y superposición antes de confirmar."],
+      ["Diseñar también los errores", "Fechas no disponibles, cancelaciones y estados vacíos forman parte central del producto, no son excepciones menores."],
+      ["Menos pasos, más confianza", "Un resumen claro y retroalimentación inmediata permiten reservar con rapidez sin perder el control de la información."]
+    ],
     next: "lab"
   }
 };
