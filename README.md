@@ -1,6 +1,6 @@
 # Portafolio de Brayan Borja
 
-Portafolio personal enfocado en Ingeniería de Sistemas, desarrollo de software, bases de datos y análisis de datos.
+Portafolio profesional de Brayan Borja, enfocado en Ingeniería de Sistemas, desarrollo de software, bases de datos y análisis de datos.
 
 ## Características
 
@@ -9,7 +9,8 @@ Portafolio personal enfocado en Ingeniería de Sistemas, desarrollo de software,
 - Navegación accesible y animaciones respetuosas con `prefers-reduced-motion`.
 - Casos de estudio completos con imágenes ampliables y bitácoras por etapas.
 - Galería vectorial propia para Lab Nutrition, Tienda Nova y el modelo de datos comercial.
-- Contacto directo por WhatsApp.
+- Perfil profesional con formación, áreas de interés y disponibilidad.
+- Contacto directo por correo y WhatsApp.
 - Sitio estático sin dependencias ni proceso de compilación.
 
 ## Ejecutar localmente
