@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Dashboard de inventario StockPilot</title>
+  <desc id="desc">Panel con indicadores, alertas de stock bajo, gráfico de movimientos y tabla de reposición.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111a2a"/><stop offset="1" stop-color="#0a101b"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000" flood-opacity=".22"/></filter>
+  </defs>
+  <rect width="1600" height="900" rx="32" fill="url(#bg)"/>
+  <rect x="34" y="34" width="255" height="832" rx="22" fill="#151f30" stroke="#2a3548"/>
+  <circle cx="77" cy="83" r="20" fill="#f2c55c"/><path d="M67 83h20M77 73v20" stroke="#172030" stroke-width="4"/>
+  <text x="112" y="90" fill="#f7f4ea" font-size="27" font-weight="700" font-family="Arial, sans-serif">StockPilot</text>
+  <text x="65" y="150" fill="#78869d" font-size="14" font-family="Arial, sans-serif" letter-spacing="2">OPERACIÓN</text>
+  <rect x="52" y="176" width="218" height="52" rx="13" fill="#f2c55c"/>
+  <text x="78" y="209" fill="#171c25" font-size="18" font-weight="700" font-family="Arial, sans-serif">Resumen</text>
+  <g fill="#9ba8ba" font-size="17" font-family="Arial, sans-serif"><text x="78" y="273">Productos</text><text x="78" y="328">Movimientos</text><text x="78" y="383">Proveedores</text><text x="78" y="438">Reposición</text><text x="78" y="493">Reportes</text></g>
+  <rect x="52" y="746" width="218" height="88" rx="15" fill="#1c283b"/>
+  <circle cx="82" cy="784" r="17" fill="#39475d"/><text x="109" y="780" fill="#e7ebf2" font-size="15" font-family="Arial, sans-serif">Responsable</text><text x="109" y="805" fill="#7f8da2" font-size="13" font-family="Arial, sans-serif">Almacén general</text>
+
+  <text x="337" y="83" fill="#ffffff" font-size="31" font-weight="700" font-family="Arial, sans-serif">Control de inventario</text>
+  <text x="337" y="112" fill="#8492a7" font-size="16" font-family="Arial, sans-serif">Estado operativo · datos de demostración</text>
+  <rect x="1316" y="56" width="235" height="54" rx="14" fill="#f2c55c"/>
+  <text x="1362" y="90" fill="#171c25" font-size="17" font-weight="700" font-family="Arial, sans-serif">+ Registrar entrada</text>
+
+  <g filter="url(#shadow)">
+    <rect x="337" y="153" width="276" height="142" rx="18" fill="#151f30" stroke="#2b3648"/>
+    <rect x="633" y="153" width="276" height="142" rx="18" fill="#151f30" stroke="#2b3648"/>
+    <rect x="929" y="153" width="276" height="142" rx="18" fill="#151f30" stroke="#2b3648"/>
+    <rect x="1225" y="153" width="326" height="142" rx="18" fill="#2a2317" stroke="#6d5422"/>
+  </g>
+  <g font-family="Arial, sans-serif"><text x="365" y="190" fill="#8694a8" font-size="15">PRODUCTOS ACTIVOS</text><text x="365" y="252" fill="#fff" font-size="43" font-weight="700">248</text><text x="365" y="278" fill="#55dfae" font-size="14">+12 este mes</text>
+  <text x="661" y="190" fill="#8694a8" font-size="15">UNIDADES DISPONIBLES</text><text x="661" y="252" fill="#fff" font-size="43" font-weight="700">3,842</text><text x="661" y="278" fill="#9ba8ba" font-size="14">Valor actualizado</text>
+  <text x="957" y="190" fill="#8694a8" font-size="15">MOVIMIENTOS HOY</text><text x="957" y="252" fill="#fff" font-size="43" font-weight="700">36</text><text x="957" y="278" fill="#74a7ff" font-size="14">24 salidas · 12 entradas</text>
+  <text x="1253" y="190" fill="#d8b766" font-size="15">REQUIEREN ATENCIÓN</text><text x="1253" y="252" fill="#f2c55c" font-size="43" font-weight="700">14</text><text x="1253" y="278" fill="#c5a958" font-size="14">Por debajo del stock mínimo</text></g>
+
+  <rect x="337" y="323" width="750" height="300" rx="20" fill="#151f30" stroke="#2b3648"/>
+  <text x="365" y="365" fill="#fff" font-size="20" font-weight="700" font-family="Arial, sans-serif">Movimientos de los últimos 7 días</text>
+  <text x="365" y="391" fill="#7f8da2" font-size="14" font-family="Arial, sans-serif">Entradas y salidas registradas</text>
+  <line x1="386" y1="558" x2="1044" y2="558" stroke="#344054"/><line x1="386" y1="505" x2="1044" y2="505" stroke="#273246"/><line x1="386" y1="452" x2="1044" y2="452" stroke="#273246"/>
+  <g fill="#f2c55c"><rect x="410" y="482" width="24" height="76" rx="5"/><rect x="500" y="445" width="24" height="113" rx="5"/><rect x="590" y="467" width="24" height="91" rx="5"/><rect x="680" y="421" width="24" height="137" rx="5"/><rect x="770" y="438" width="24" height="120" rx="5"/><rect x="860" y="399" width="24" height="159" rx="5"/><rect x="950" y="425" width="24" height="133" rx="5"/></g>
+  <g fill="#52647d"><rect x="439" y="508" width="24" height="50" rx="5"/><rect x="529" y="493" width="24" height="65" rx="5"/><rect x="619" y="482" width="24" height="76" rx="5"/><rect x="709" y="470" width="24" height="88" rx="5"/><rect x="799" y="488" width="24" height="70" rx="5"/><rect x="889" y="456" width="24" height="102" rx="5"/><rect x="979" y="468" width="24" height="90" rx="5"/></g>
+  <g fill="#78869b" font-size="13" font-family="Arial, sans-serif"><text x="414" y="586">Lun</text><text x="504" y="586">Mar</text><text x="594" y="586">Mié</text><text x="684" y="586">Jue</text><text x="774" y="586">Vie</text><text x="864" y="586">Sáb</text><text x="954" y="586">Dom</text></g>
+
+  <rect x="1111" y="323" width="440" height="300" rx="20" fill="#151f30" stroke="#2b3648"/>
+  <text x="1139" y="365" fill="#fff" font-size="20" font-weight="700" font-family="Arial, sans-serif">Alertas prioritarias</text>
+  <g font-family="Arial, sans-serif"><rect x="1139" y="398" width="384" height="57" rx="12" fill="#211f1d"/><circle cx="1167" cy="426" r="8" fill="#f2c55c"/><text x="1190" y="422" fill="#e9edf3" font-size="15">Cable HDMI 2 m</text><text x="1190" y="442" fill="#8896aa" font-size="12">Quedan 3 · mínimo 10</text><text x="1455" y="431" fill="#f2c55c" font-size="13">Reponer</text>
+  <rect x="1139" y="465" width="384" height="57" rx="12" fill="#1b2331"/><circle cx="1167" cy="493" r="8" fill="#ff8178"/><text x="1190" y="489" fill="#e9edf3" font-size="15">Tinta impresora 664</text><text x="1190" y="509" fill="#8896aa" font-size="12">Sin existencias</text><text x="1455" y="498" fill="#ff8178" font-size="13">Urgente</text>
+  <rect x="1139" y="532" width="384" height="57" rx="12" fill="#1b2331"/><circle cx="1167" cy="560" r="8" fill="#74a7ff"/><text x="1190" y="556" fill="#e9edf3" font-size="15">Mouse inalámbrico</text><text x="1190" y="576" fill="#8896aa" font-size="12">Alta rotación esta semana</text><text x="1455" y="565" fill="#74a7ff" font-size="13">Revisar</text></g>
+
+  <rect x="337" y="649" width="1214" height="183" rx="20" fill="#151f30" stroke="#2b3648"/>
+  <text x="365" y="691" fill="#fff" font-size="20" font-weight="700" font-family="Arial, sans-serif">Sugerencia de reposición</text>
+  <g fill="#77869b" font-size="13" font-family="Arial, sans-serif"><text x="365" y="728">PRODUCTO</text><text x="760" y="728">STOCK</text><text x="900" y="728">MÍNIMO</text><text x="1040" y="728">SUGERIDO</text><text x="1260" y="728">ESTADO</text></g>
+  <line x1="365" y1="744" x2="1522" y2="744" stroke="#2a3547"/>
+  <g fill="#e8edf4" font-size="15" font-family="Arial, sans-serif"><text x="365" y="780">Cable HDMI 2 m</text><text x="760" y="780">3</text><text x="900" y="780">10</text><text x="1040" y="780">20 unidades</text></g>
+  <rect x="1260" y="758" width="114" height="30" rx="15" fill="#3c321d"/><text x="1285" y="779" fill="#f2c55c" font-size="13" font-family="Arial, sans-serif">Pendiente</text>
+</svg>
