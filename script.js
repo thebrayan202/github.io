@@ -43,6 +43,22 @@ menuButton.addEventListener("click", () => {
 
 mobileMenu.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
 
+const protectedEmail = () => atob("YnJheWFuLmJwZGltaUBpY2xvdWQuY29t");
+const emailText = document.querySelector("[data-email-text]");
+const emailReveal = document.querySelector("[data-email-reveal]");
+const emailCompose = document.querySelector("[data-email-compose]");
+
+emailReveal?.addEventListener("click", () => {
+  emailText.textContent = protectedEmail();
+  emailReveal.setAttribute("aria-label", "Correo profesional mostrado");
+  emailReveal.classList.add("revealed");
+});
+
+emailCompose?.addEventListener("click", () => {
+  const subject = encodeURIComponent("Oportunidad profesional - Brayan Borja");
+  window.location.href = `mailto:${protectedEmail()}?subject=${subject}`;
+});
+
 const updateHeader = () => header.classList.toggle("scrolled", window.scrollY > 18);
 updateHeader();
 window.addEventListener("scroll", updateHeader, { passive: true });
@@ -51,8 +67,6 @@ const revealObserver = new IntersectionObserver(
   (entries, observer) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
-      const delay = entry.target.dataset.delay;
-      if (delay) entry.target.style.setProperty("--delay", `${delay}ms`);
       entry.target.classList.add("visible");
       observer.unobserve(entry.target);
     });
