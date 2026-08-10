@@ -3,40 +3,6 @@ const header = document.querySelector("[data-header]");
 const themeButton = document.querySelector("[data-theme-toggle]");
 const menuButton = document.querySelector("[data-menu-button]");
 const mobileMenu = document.querySelector("[data-mobile-menu]");
-const dialog = document.querySelector("[data-project-dialog]");
-
-const projects = {
-  lab: {
-    title: "Lab Nutrition",
-    challenge:
-      "Organizar un proceso de compras con varios estados, registros relacionados y acciones que debían ser fáciles de entender.",
-    approach:
-      "Definí los flujos principales, construí componentes reutilizables y probé las tareas clave con usuarios para detectar fricciones.",
-    learning:
-      "Una interfaz clara nace de reglas consistentes. Las pruebas pequeñas y tempranas evitan decisiones basadas solo en intuición.",
-    tags: ["Figma", "UX/UI", "Atomic Design", "Usabilidad"],
-  },
-  nova: {
-    title: "Tienda Nova",
-    challenge:
-      "Representar las operaciones de una tienda sin concentrar toda la lógica en una sola clase o mezclar datos con interfaz.",
-    approach:
-      "Separé las responsabilidades por entidades, apliqué encapsulamiento y organicé las operaciones en módulos fáciles de revisar.",
-    learning:
-      "Un buen modelo de clases reduce duplicación, hace visibles las reglas del negocio y facilita los cambios posteriores.",
-    tags: ["Java", "POO", "NetBeans", "UML"],
-  },
-  data: {
-    title: "Modelo de datos comercial",
-    challenge:
-      "Conservar información de clientes, productos y ventas sin duplicidades ni relaciones ambiguas.",
-    approach:
-      "Partí de las reglas del negocio, diseñé el modelo entidad-relación y normalicé las tablas antes de escribir las consultas.",
-    learning:
-      "La calidad de una consulta depende de la calidad del modelo. Definir claves y restricciones desde el inicio protege los datos.",
-    tags: ["SQL", "Modelo ER", "3FN", "Consultas"],
-  },
-};
 
 const getPreferredTheme = () => {
   const savedTheme = localStorage.getItem("portfolio-theme");
@@ -109,35 +75,5 @@ const sectionObserver = new IntersectionObserver(
 );
 
 document.querySelectorAll("main section[id]").forEach((section) => sectionObserver.observe(section));
-
-const openProject = (projectKey) => {
-  const project = projects[projectKey];
-  if (!project) return;
-
-  dialog.querySelector("[data-dialog-title]").textContent = project.title;
-  dialog.querySelector("[data-dialog-challenge]").textContent = project.challenge;
-  dialog.querySelector("[data-dialog-approach]").textContent = project.approach;
-  dialog.querySelector("[data-dialog-learning]").textContent = project.learning;
-
-  const tagContainer = dialog.querySelector("[data-dialog-tags]");
-  tagContainer.replaceChildren(
-    ...project.tags.map((tag) => {
-      const element = document.createElement("span");
-      element.textContent = tag;
-      return element;
-    }),
-  );
-
-  dialog.showModal();
-};
-
-document.querySelectorAll("[data-project]").forEach((button) => {
-  button.addEventListener("click", () => openProject(button.dataset.project));
-});
-
-dialog.querySelector("[data-dialog-close]").addEventListener("click", () => dialog.close());
-dialog.addEventListener("click", (event) => {
-  if (event.target === dialog) dialog.close();
-});
 
 document.querySelector("[data-year]").textContent = new Date().getFullYear();
