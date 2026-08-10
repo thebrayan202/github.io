@@ -8,7 +8,8 @@ Portafolio profesional de Brayan Borja, enfocado en Ingeniería de Sistemas, des
 - Tema claro y oscuro con preferencia persistente.
 - Navegación accesible y animaciones respetuosas con `prefers-reduced-motion`.
 - Casos de estudio completos con imágenes ampliables y bitácoras por etapas.
-- Galería vectorial propia para Lab Nutrition, Tienda Nova y el modelo de datos comercial.
+- Galería vectorial propia para seis casos de estudio académicos y aplicados.
+- Proyectos de inventario, finanzas personales y gestión de citas con bitácoras profesionales.
 - Perfil profesional con formación, áreas de interés y disponibilidad.
 - Correo profesional protegido contra rastreadores básicos y sin número personal publicado.
 - Política de referencias restrictiva y Content Security Policy para limitar recursos no autorizados.
