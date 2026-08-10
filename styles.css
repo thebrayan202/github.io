@@ -380,7 +380,7 @@ svg {
 .data-visual { background: linear-gradient(145deg, #583e82, #20213d 70%, #14182c); }
 .stock-visual { background: linear-gradient(145deg, #765515, #342b18 68%, #1c1a15); }
 .farma-visual { background: linear-gradient(145deg, #086a75, #153d46 68%, #102329); }
-.citas-visual { background: linear-gradient(145deg, #8a3d63, #3c2135 68%, #231722); }
+.rumbo-visual { background: linear-gradient(145deg, #2469a8, #18344f 68%, #101e2d); }
 
 .project-image-frame img { position: relative; z-index: 2; width: min(100%, 780px); border: 1px solid rgba(255,255,255,.18); border-radius: 14px; box-shadow: 0 28px 65px rgba(0,0,0,.32); transition: transform 300ms ease; }
 .project-card:hover .project-image-frame img { transform: translateY(-5px) scale(1.015); }
@@ -593,7 +593,7 @@ a.contact-detail:hover, button.contact-detail:hover, button.contact-detail.revea
 .case-hero[data-case-theme="data"] { --case-accent: #b995ff; }
 .case-hero[data-case-theme="stock"] { --case-accent: #f2c55c; }
 .case-hero[data-case-theme="farma"] { --case-accent: #54d6dd; }
-.case-hero[data-case-theme="citas"] { --case-accent: #ff8fc5; }
+.case-hero[data-case-theme="rumbo"] { --case-accent: #8be36b; }
 .case-hero-grid { position: relative; display: grid; grid-template-columns: minmax(0,1.35fr) minmax(260px,.65fr); gap: 70px; align-items: end; }
 .case-hero-copy h1 { margin: 10px 0 24px; font-size: clamp(3.6rem,8vw,7.6rem); line-height: .94; letter-spacing: -.075em; }
 .case-lead { max-width: 800px; margin: 0 0 28px; color: var(--text-soft); font-size: clamp(1.05rem,2vw,1.3rem); line-height: 1.7; }
