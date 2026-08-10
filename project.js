@@ -120,36 +120,44 @@ const projects = {
       ["Una alerta debe orientar", "Mostrar un número en rojo no basta: una buena alerta explica el riesgo y propone la siguiente acción."],
       ["Primero consistencia, luego análisis", "Los indicadores solo son útiles cuando las reglas de registro y el modelo de datos protegen la calidad de la información."]
     ],
-    next: "finance"
+    next: "farma"
   },
-  finance: {
-    type: "Análisis de datos · Proyecto aplicado",
-    title: "MiPresupuesto",
-    summary: "Dashboard de finanzas personales que convierte ingresos y gastos de ejemplo en indicadores claros para planificar el mes y detectar desviaciones.",
-    intro: "MiPresupuesto responde a una necesidad cotidiana: muchas personas saben cuánto ganan, pero no pueden explicar con precisión en qué se va su dinero ni si llegarán a su meta mensual. El proyecto utiliza un conjunto de datos completamente ficticio, documenta su limpieza y construye un dashboard que compara presupuesto, gasto real, ahorro y categorías.",
-    challenge: "Los movimientos suelen tener descripciones distintas, categorías inconsistentes y fechas en formatos diferentes. Sin una estructura común, comparar meses o detectar un exceso requiere revisar cada registro manualmente.",
-    solution: "Un flujo de datos que estandariza movimientos, asigna categorías y alimenta un modelo de análisis. El dashboard presenta ingresos, gastos, ahorro, cumplimiento de presupuesto, evolución semanal y categorías con mayor desviación.",
-    role: "Definí las preguntas de análisis, preparé un dataset ficticio, documenté las reglas de limpieza y diseñé el modelo de indicadores. Después construí la jerarquía visual del dashboard y validé los resultados con cálculos independientes.",
-    theme: "finance",
-    tags: ["Power BI", "Excel", "SQL", "ETL", "Visualización"],
-    facts: [["4", "indicadores"], ["6", "categorías"], ["6", "etapas documentadas"]],
-    cover: "assets/finance-dashboard.svg",
+  farma: {
+    type: "Analítica geoespacial · Proyecto aplicado",
+    title: "FarmaRadar Perú",
+    summary: "Herramienta para comparar zonas del Perú y estimar la oportunidad de abrir una farmacia mediante datos públicos, ubicación y escenarios de costos.",
+    intro: "FarmaRadar Perú nace de una pregunta empresarial concreta: ¿en qué zona tendría mejores condiciones una nueva farmacia? El proyecto cruza población, farmacias y boticas autorizadas, cercanía a establecimientos de salud, oferta de medicamentos y variables financieras ingresadas por el usuario. El resultado es un análisis por departamento, provincia y distrito con fecha de corte visible. No afirma que una ubicación será rentable: permite comparar escenarios y entender qué supuestos sostienen cada resultado.",
+    challenge: "La población alta por sí sola no demuestra una oportunidad. Una zona puede tener mucha demanda potencial, pero también competencia intensa, alquiler elevado, baja disponibilidad de locales o márgenes insuficientes. Además, las fuentes públicas usan estructuras y fechas distintas que deben normalizarse antes de compararlas.",
+    solution: "Un pipeline en Python que limpia y une datos mediante ubigeo, geocodifica establecimientos y calcula variables espaciales en PostGIS. El dashboard muestra competencia dentro de un radio configurable, población por farmacia autorizada, proximidad a IPRESS, rango de precios, punto de equilibrio y escenarios conservador, base y optimista.",
+    role: "Definí la pregunta de negocio, seleccioné fuentes peruanas verificables, diseñé el modelo geoespacial y documenté la fórmula de rentabilidad estimada. También planteé controles de calidad, supuestos editables, advertencias y una interfaz que permite explicar por qué una zona obtiene determinado puntaje.",
+    theme: "farma",
+    tags: ["Python", "Pandas", "GeoPandas", "PostgreSQL", "PostGIS"],
+    facts: [["4", "fuentes oficiales"], ["5", "variables clave"], ["8", "etapas documentadas"]],
+    cover: "assets/farma-dashboard.svg",
     gallery: [
-      {src:"assets/finance-dashboard.svg", title:"Dashboard mensual", text:"Indicadores de ingreso, gasto, ahorro y presupuesto, acompañados por tendencia y distribución por categoría."},
-      {src:"assets/finance-model.svg", title:"Proceso de preparación de datos", text:"Ruta desde los movimientos sin ordenar hasta una tabla limpia, un modelo analítico y medidas verificables."}
+      {src:"assets/farma-dashboard.svg", title:"Mapa de oportunidad y simulador", text:"Comparación de zonas del Perú con filtros territoriales, competencia cercana, demanda potencial y resultado mensual estimado."},
+      {src:"assets/farma-method.svg", title:"Fuentes, modelo y fórmula", text:"Proceso que une datos oficiales, análisis espacial y costos editables antes de calcular escenarios y punto de equilibrio."}
     ],
     log: [
-      ["Etapa 01", "Preguntas de análisis", "Se definieron las decisiones que debía facilitar el tablero: cuánto se gastó, cuánto se ahorró, dónde hubo excesos y cómo cambió el comportamiento durante el mes.", "Lista priorizada de preguntas e indicadores."],
-      ["Etapa 02", "Dataset seguro", "Se creó información ficticia con fechas, descripciones, categorías, medios de pago e importes, incluyendo errores controlados para probar la limpieza.", "Dataset de prueba sin datos financieros reales."],
-      ["Etapa 03", "Limpieza y transformación", "Se corrigieron formatos, categorías vacías, duplicados y signos de importes. Las reglas quedaron registradas para que el proceso pueda repetirse.", "Tabla limpia y bitácora de transformaciones."],
-      ["Etapa 04", "Modelo e indicadores", "Se separaron calendario, categorías y movimientos. Luego se definieron ingreso, gasto, ahorro y porcentaje de presupuesto utilizado.", "Modelo analítico y catálogo de medidas."],
-      ["Etapa 05", "Diseño del dashboard", "Se ordenó la información desde el resumen mensual hasta el detalle por categoría, usando color solo para señalar cumplimiento o riesgo.", "Dashboard de una página y guía visual."],
-      ["Etapa 06", "Validación y conclusiones", "Se compararon totales con cálculos independientes y se revisaron filtros, porcentajes y casos sin datos antes de redactar conclusiones accionables.", "Checklist de calidad y resumen de hallazgos."],
+      ["Etapa 01", "Pregunta y alcance", "Se definió que la herramienta compararía oportunidades a nivel de distrito y no recomendaría un local específico sin inspección presencial. La rentabilidad se trataría como escenario, no como certeza.", "Documento de alcance, usuario y límites del análisis."],
+      ["Etapa 02", "Inventario de fuentes", "Se seleccionaron DIGEMID para establecimientos y precios, INEI para población y SUSALUD–RENIPRESS para IPRESS. Para cada fuente se registraron responsable, cobertura y fecha de corte.", "Catálogo de fuentes y matriz de actualización."],
+      ["Etapa 03", "Limpieza territorial", "Se estandarizaron departamento, provincia, distrito y ubigeo; se revisaron duplicados, direcciones incompletas y registros sin coordenadas antes de unir las tablas.", "Pipeline reproducible en Python y reporte de calidad."],
+      ["Etapa 04", "Modelo geoespacial", "Los establecimientos se representaron como puntos y los distritos como áreas. PostGIS permitió contar competidores por radio y calcular distancia a IPRESS cercanas.", "Esquema espacial, consultas y diccionario de variables."],
+      ["Etapa 05", "Índice de oportunidad", "Se combinaron población por farmacia autorizada, competencia cercana, proximidad a IPRESS, disponibilidad/precio y presión de costos. Los pesos quedaron visibles y editables.", "Fórmula documentada y análisis de sensibilidad."],
+      ["Etapa 06", "Escenario financiero", "Se calculó ingreso mensual como tickets por día × ticket promedio × días de atención. El margen bruto menos alquiler, personal, servicios y logística produce el resultado operativo estimado.", "Simulador conservador, base y optimista con punto de equilibrio."],
+      ["Etapa 07", "Mapa y explicación", "La interfaz permite filtrar territorio, comparar zonas y abrir una ficha que explica qué variables elevan o reducen el puntaje, evitando un ranking sin contexto.", "Dashboard geográfico y ficha comparativa por distrito."],
+      ["Etapa 08", "Validación y advertencias", "Se revisaron totales por fuente, coordenadas fuera del distrito, fechas desactualizadas y escenarios extremos. Se añadió una advertencia para validar alquiler, tránsito peatonal, licencias y competencia en campo.", "Checklist de calidad, limitaciones y plan de actualización."],
     ],
     learnings: [
-      ["La pregunta dirige el análisis", "Elegir primero la decisión que se quiere mejorar evita llenar el dashboard con gráficos que no conducen a una acción."],
-      ["Limpiar también es documentar", "Una transformación reproducible necesita explicar qué se cambió, por qué y cómo se verificó."],
-      ["Privacidad desde el origen", "Los datos ficticios permiten demostrar el análisis sin publicar información financiera personal ni identificadores sensibles."]
+      ["Un puntaje debe poder explicarse", "Una zona no es atractiva solo porque aparece verde: el usuario debe ver las variables, los pesos y la fecha que produjeron el resultado."],
+      ["Los datos públicos no reemplazan el terreno", "Población y competencia orientan la búsqueda, pero alquiler, flujo peatonal, seguridad y permisos necesitan validación local."],
+      ["Rentabilidad significa escenario", "Separar datos observados de supuestos financieros evita presentar una estimación como si fuera una ganancia garantizada."]
+    ],
+    sources: [
+      {label:"DIGEMID", title:"Observatorio de Precios de Medicamentos", text:"Farmacias y boticas autorizadas, ubicación, oferta y comparación de precios por territorio.", url:"https://www.digemid.minsa.gob.pe/webDigemid/notas/2026/consigue-medicamentos-de-calidad-a-bajo-costo-consultando-el-observatorio-de-precios-de-la-digemid/"},
+      {label:"INEI", title:"Población proyectada por distrito", text:"Población territorial usada para construir medidas de demanda potencial y cobertura.", url:"https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib0012/N53/anexo031.htm"},
+      {label:"SUSALUD", title:"Registro Nacional de IPRESS", text:"Ubicación oficial de establecimientos de salud públicos, privados y mixtos del país.", url:"https://datos.susalud.gob.pe/dataset/registro-nacional-de-ipress-renipress"},
+      {label:"DIGEMID", title:"Regulación de establecimientos", text:"Requisito de autorización sanitaria y contexto normativo para farmacias y boticas.", url:"https://www.digemid.minsa.gob.pe/webDigemid/establecimientos/"}
     ],
     next: "citas"
   },
@@ -188,7 +196,9 @@ const projects = {
 };
 
 const params = new URLSearchParams(window.location.search);
-const id = projects[params.get("id")] ? params.get("id") : "lab";
+const aliases = { finance: "farma" };
+const requestedId = aliases[params.get("id")] || params.get("id");
+const id = projects[requestedId] ? requestedId : "lab";
 const project = projects[id];
 const root = document.documentElement;
 
@@ -211,6 +221,23 @@ document.querySelector("[data-project-intro]").textContent = project.intro;
 document.querySelector("[data-project-challenge]").textContent = project.challenge;
 document.querySelector("[data-project-solution]").textContent = project.solution;
 document.querySelector("[data-project-role]").textContent = project.role;
+
+const sourcesPanel = document.querySelector("[data-project-sources-panel]");
+if (project.sources?.length) {
+  sourcesPanel.hidden = false;
+  document.querySelector("[data-project-sources]").replaceChildren(...project.sources.map((source) => {
+    const link = document.createElement("a");
+    link.href = source.url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    const label = document.createElement("span"); label.textContent = source.label;
+    const title = document.createElement("strong"); title.textContent = source.title;
+    const text = document.createElement("p"); text.textContent = source.text;
+    const arrow = document.createElement("i"); arrow.textContent = "Abrir fuente ↗";
+    link.append(label, title, text, arrow);
+    return link;
+  }));
+}
 
 const cover = document.querySelector("[data-project-cover]");
 cover.src = project.cover;
