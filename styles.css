@@ -379,7 +379,7 @@ svg {
 .nova-visual { background: linear-gradient(145deg, #253c70, #131e37 68%, #101828); }
 .data-visual { background: linear-gradient(145deg, #583e82, #20213d 70%, #14182c); }
 .stock-visual { background: linear-gradient(145deg, #765515, #342b18 68%, #1c1a15); }
-.finance-visual { background: linear-gradient(145deg, #12634c, #15372f 68%, #11231f); }
+.farma-visual { background: linear-gradient(145deg, #086a75, #153d46 68%, #102329); }
 .citas-visual { background: linear-gradient(145deg, #8a3d63, #3c2135 68%, #231722); }
 
 .project-image-frame img { position: relative; z-index: 2; width: min(100%, 780px); border: 1px solid rgba(255,255,255,.18); border-radius: 14px; box-shadow: 0 28px 65px rgba(0,0,0,.32); transition: transform 300ms ease; }
@@ -592,7 +592,7 @@ a.contact-detail:hover, button.contact-detail:hover, button.contact-detail.revea
 .case-hero[data-case-theme="nova"] { --case-accent: #74a7ff; }
 .case-hero[data-case-theme="data"] { --case-accent: #b995ff; }
 .case-hero[data-case-theme="stock"] { --case-accent: #f2c55c; }
-.case-hero[data-case-theme="finance"] { --case-accent: #55dfae; }
+.case-hero[data-case-theme="farma"] { --case-accent: #54d6dd; }
 .case-hero[data-case-theme="citas"] { --case-accent: #ff8fc5; }
 .case-hero-grid { position: relative; display: grid; grid-template-columns: minmax(0,1.35fr) minmax(260px,.65fr); gap: 70px; align-items: end; }
 .case-hero-copy h1 { margin: 10px 0 24px; font-size: clamp(3.6rem,8vw,7.6rem); line-height: .94; letter-spacing: -.075em; }
@@ -613,6 +613,18 @@ a.contact-detail:hover, button.contact-detail:hover, button.contact-detail.revea
 .case-info-grid article > span { color: var(--accent); font: .62rem var(--mono); letter-spacing: .08em; text-transform: uppercase; }
 .case-info-grid h3 { margin: 25px 0 11px; font-size: 1.05rem; }
 .case-info-grid p { margin: 0; color: var(--text-soft); font-size: .85rem; }
+.case-sources-panel { margin-top: 54px; padding: clamp(28px,4vw,45px); border: 1px solid var(--line-strong); border-radius: 20px; background: var(--bg-deep); }
+.case-sources-panel[hidden] { display: none; }
+.case-sources-heading { display: grid; grid-template-columns: 1fr minmax(280px,420px); gap: 45px; align-items: end; margin-bottom: 30px; }
+.case-sources-heading h3 { margin: 0; font-size: clamp(1.7rem,3vw,2.5rem); letter-spacing: -.04em; }
+.case-sources-heading > p { margin: 0; color: var(--text-soft); font-size: .82rem; }
+.case-source-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; }
+.case-source-grid a { position: relative; display: flex; flex-direction: column; min-height: 190px; padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); transition: transform 160ms ease, border-color 160ms ease; }
+.case-source-grid a:hover { transform: translateY(-3px); border-color: var(--accent-dark); }
+.case-source-grid span { color: var(--accent); font: .61rem var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+.case-source-grid strong { margin-top: 22px; font-size: 1rem; }
+.case-source-grid p { margin: 8px 0 20px; color: var(--text-soft); font-size: .76rem; }
+.case-source-grid i { margin-top: auto; color: var(--text-faint); font: normal .61rem var(--mono); }
 .case-gallery-section { border-block: 1px solid var(--line); background: var(--bg-deep); }
 .case-gallery { display: grid; gap: 45px; }
 .case-gallery figure { margin: 0; }
@@ -655,6 +667,7 @@ a.contact-detail:hover, button.contact-detail:hover, button.contact-detail.revea
   .case-info-grid article, .learning-grid article { min-height: auto; }
   .learning-grid h3 { margin-top: 35px; }
   .case-heading-sticky { position: static; }
+  .case-sources-heading { grid-template-columns: 1fr; gap: 14px; }
 }
 
 @media (max-width: 640px) {
@@ -669,5 +682,6 @@ a.contact-detail:hover, button.contact-detail:hover, button.contact-detail.revea
   .case-section-heading .section-number { margin-bottom: 18px; }
   .case-intro { margin-left: 0; font-size: 1.15rem; }
   .case-gallery figcaption { grid-template-columns: 1fr; gap: 5px; }
+  .case-source-grid { grid-template-columns: 1fr; }
   .case-next-card { align-items: stretch; flex-direction: column; }
 }
