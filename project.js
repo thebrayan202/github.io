@@ -18,10 +18,10 @@ const projects = {
         ["Lógica y validación", ["JavaScript", "Figma Plugin API", "Atomic Design", "Pruebas de usabilidad"]]
       ]
     },
-    cover: "assets/lab-dashboard.svg",
+    cover: "assets/lab-figma-dashboard.png",
     gallery: [
-      {src: "assets/lab-dashboard.svg", title: "Dashboard logístico", text: "Vista reconstruida a partir de los datos de demostración definidos en el código: cuatro marcas registradas, una compra pendiente y una aprobada."},
-      {src: "assets/lab-prototype.svg", title: "Registro y aprobación", text: "Dos momentos del flujo: registro de una marca con código automático y aprobación de una compra con total, fecha y estado visibles."},
+      {src: "assets/lab-figma-dashboard.png", title: "Dashboard del prototipo", text: "Vista visual basada en el diseño de Figma del proyecto: cuatro marcas registradas, una compra pendiente y una aprobada."},
+      {src: "assets/lab-figma-flow.png", title: "Registro y aprobación", text: "Dos momentos del prototipo de Figma: registro de una marca con código automático y aprobación de una compra con total, fecha y estado visibles."},
       {src: "assets/lab-roadmap.png", title: "Plan de versiones", text: "Hoja de ruta presentada para diferenciar la fase entregada en julio de 2026 de las mejoras planificadas para octubre de 2026 y enero de 2027."}
     ],
     evidence: [

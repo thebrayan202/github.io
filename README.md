@@ -42,8 +42,8 @@ Luego visita `http://localhost:8000`.
 ├── script.js
 ├── project.js
 ├── assets/
-│   ├── lab-dashboard.svg
-│   ├── lab-prototype.svg
+│   ├── lab-figma-dashboard.png
+│   ├── lab-figma-flow.png
 │   ├── lab-roadmap.png
 │   ├── nova-dashboard.png
 │   ├── nova-products.png
