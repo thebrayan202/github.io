@@ -1,212 +1,89 @@
 const projects = {
   lab: {
-    type: "Producto digital · Proyecto académico",
+    type: "Prototipo interactivo · Proyecto académico",
     title: "Lab Nutrition",
-    summary: "Sistema logístico diseñado para registrar marcas, modelos y compras dentro de un flujo ordenado, verificable y fácil de aprender.",
-    intro: "Lab Nutrition nació de una necesidad concreta: reunir en un solo sistema operaciones que normalmente se controlaban desde pantallas y registros separados. El proyecto no se limitó a diseñar interfaces bonitas; primero se definieron reglas, estados y relaciones. Después se construyeron los flujos, se probaron con usuarios y se iteró sobre los resultados.",
-    challenge: "El proceso de compras tenía varias entidades relacionadas y acciones que podían confundirse entre sí. Era necesario mostrar qué información era obligatoria, qué registro se estaba editando y cuál era el estado de cada compra sin sobrecargar la pantalla.",
-    solution: "Un prototipo navegable con Dashboard, Registrar Marca, Registrar Modelo, Registrar Compra y Aprobar Compra. Se añadieron códigos automáticos, estados visibles, validaciones, menús desplegables y acciones consistentes para guardar, editar, limpiar y eliminar.",
-    role: "Como Alumno 2 trabajé en el diseño y refinamiento de más de tres pantallas, la construcción de componentes y variantes, las interacciones del prototipo, la organización del UX Kit y el análisis de las pruebas de usabilidad.",
+    summary: "Sistema logístico en Figma para registrar marcas, modelos y compras, aprobar operaciones y comprobar la experiencia mediante pruebas de usabilidad.",
+    intro: "Lab Nutrition reúne en un mismo flujo el registro de marcas, modelos y compras. El entregable incluye un plugin de Figma escrito en JavaScript que genera dos páginas de trabajo, nueve pantallas, componentes reutilizables, variables de estado e interacciones para guardar, editar, eliminar, aprobar y rechazar registros. La documentación adjunta permite seguir el proyecto desde la construcción del prototipo hasta la evaluación con usuarios.",
+    challenge: "El flujo logístico relaciona varias entidades y estados. La interfaz debía indicar qué campos son obligatorios, mostrar códigos automáticos, mantener visible el registro seleccionado y comunicar con claridad cuándo una compra está pendiente, aprobada o rechazada.",
+    solution: "Un prototipo navegable con Dashboard, Registrar Marca, Registrar Modelo, Registrar Compra y Aprobar Compra, acompañado por pantallas reutilizables para agregar, editar y eliminar. El sistema visual usa componentes, variantes, dropdowns, calendario y variables de Figma para simular cambios de estado sin depender de pantallas estáticas desconectadas.",
+    role: "Mi trabajo documentado abarcó la construcción y ordenamiento del prototipo, la definición de componentes y variables, la conexión de interacciones, la preparación de la prueba moderada y no moderada, la consolidación de resultados y el plan de versiones. Los documentos con nombres de participantes y códigos personales se mantienen fuera del sitio público.",
     theme: "lab",
-    tags: ["Figma", "UX/UI", "Prototipado", "Atomic Design", "Usabilidad"],
-    facts: [["5+", "evaluaciones"], ["5", "módulos"], ["6", "etapas documentadas"]],
+    tags: ["Figma", "JavaScript", "Figma Plugin API", "UX/UI", "Pruebas de usabilidad"],
+    facts: [["9", "pantallas interactivas"], ["4/4", "tareas completadas"], ["22,5 s", "tiempo promedio"]],
     cover: "assets/lab-dashboard.svg",
     gallery: [
-      {src:"assets/lab-dashboard.svg", title:"Dashboard y navegación", text:"Vista general de indicadores y acceso a los módulos principales del sistema."},
-      {src:"assets/lab-prototype.svg", title:"Registro y aprobación", text:"Flujo con código automático, campos validados, tabla de resultados y estados visibles."}
+      {src: "assets/lab-dashboard.svg", title: "Dashboard logístico", text: "Vista reconstruida a partir de los datos de demostración definidos en el código: cuatro marcas registradas, una compra pendiente y una aprobada."},
+      {src: "assets/lab-prototype.svg", title: "Registro y aprobación", text: "Dos momentos del flujo: registro de una marca con código automático y aprobación de una compra con total, fecha y estado visibles."},
+      {src: "assets/lab-roadmap.png", title: "Plan de versiones", text: "Hoja de ruta presentada para diferenciar la fase entregada en julio de 2026 de las mejoras planificadas para octubre de 2026 y enero de 2027."}
+    ],
+    evidence: [
+      ["Código", "Plugin de Figma", "Archivo JavaScript que crea el sistema visual, las nueve pantallas, variables, componentes y reacciones del prototipo."],
+      ["Investigación", "Informe de usabilidad", "Una sesión moderada y una prueba no moderada centradas en la tarea Registrar modelo."],
+      ["Datos", "Matriz de respuestas", "Cuatro respuestas: 100 % completó la tarea, tres valoraciones Fácil y una Regular; promedio de 22,5 segundos."],
+      ["Proceso", "Manejo de versiones", "Plan v1.0, v1.1 y v2.0 que separa lo entregado de las mejoras futuras."]
     ],
     log: [
-      ["Etapa 01", "Definición del problema", "Se identificaron los usuarios, las operaciones principales y las reglas que debía respetar el sistema.", "Mapa inicial de necesidades y alcance."],
-      ["Etapa 02", "Arquitectura del flujo", "Se ordenaron los módulos y se definió cómo pasaría el usuario desde el registro hasta la aprobación de una compra.", "Flujo de navegación y estructura de pantallas."],
-      ["Etapa 03", "Sistema de diseño", "Se establecieron colores, tipografía, botones, campos, tablas, estados y componentes reutilizables.", "Design System y Atomic Design."],
-      ["Etapa 04", "Prototipo funcional", "Se conectaron botones, dropdowns, calendario y variantes para representar guardar, editar, eliminar y limpiar.", "Prototipo navegable en Figma."],
-      ["Etapa 05", "Pruebas de usabilidad", "Se evaluaron tareas clave con participantes y se registraron hallazgos cuantitativos y cualitativos.", "Evidencias, métricas y observaciones."],
-      ["Etapa 06", "Iteración final", "Se corrigieron textos, jerarquías, estados y comportamientos que generaban dudas durante las pruebas.", "Versión refinada y documentada."]
+      ["Etapa 01", "Definición del alcance", "Se delimitaron las entidades, tareas y estados que debía representar el sistema logístico.", "Alcance funcional y cinco módulos principales."],
+      ["Etapa 02", "Arquitectura de pantallas", "Se organizó el recorrido desde el Dashboard hasta el registro y la aprobación de una compra.", "Mapa de navegación y estructura de nueve pantallas."],
+      ["Etapa 03", "Sistema visual", "Se definieron paleta, tipografía Inter, botones, campos, tarjetas, tablas y estados reutilizables.", "Biblioteca de componentes y estilos en Figma."],
+      ["Etapa 04", "Variables e interacciones", "Se programaron dropdowns, calendario, códigos automáticos, mensajes y cambios de estado mediante la Figma Plugin API.", "Plugin JavaScript y prototipo navegable."],
+      ["Etapa 05", "Flujos CRUD", "Se conectaron guardar, editar, eliminar y limpiar; también se incorporaron confirmaciones para aprobar o rechazar compras.", "Flujos interactivos con respuestas visibles."],
+      ["Etapa 06", "Diseño de la prueba", "Se prepararon el guion moderado, las instrucciones no moderadas y las preguntas para evaluar Registrar modelo.", "Guion, formulario y criterios de observación."],
+      ["Etapa 07", "Análisis de resultados", "Se consolidaron cuatro respuestas no moderadas: finalización completa, sin dificultades reportadas y facilidad mayormente positiva.", "Indicadores, tiempos y hallazgos documentados."],
+      ["Etapa 08", "Plan de mejora", "Se separó la versión actual de las mejoras previstas en textos, validaciones, inventario, reportes y accesibilidad.", "Hoja de ruta v1.0 a v2.0."]
     ],
     learnings: [
-      ["Consistencia antes que decoración", "Repetir patrones de interacción reduce la carga mental y permite que el usuario aprenda el sistema más rápido."],
-      ["Probar cambia decisiones", "Las pruebas revelaron problemas que no eran evidentes al observar únicamente el diseño estático."],
-      ["Documentar mejora el producto", "La bitácora y el sistema de diseño facilitaron justificar cada cambio y mantener coherencia entre pantallas."]
+      ["El estado debe ser visible", "Los usuarios entienden mejor el flujo cuando el código, la acción actual y el resultado aparecen en la misma pantalla."],
+      ["Medir evita suposiciones", "La prueba permitió reportar finalización, facilidad y tiempo real sin inventar métricas ni conclusiones."],
+      ["Planificar no es prometer", "La hoja de ruta distingue con claridad lo ya construido de las funciones que aún están planificadas."]
     ],
     next: "nova"
   },
   nova: {
     type: "Aplicación de escritorio · Proyecto académico",
     title: "Tienda Nova",
-    summary: "Aplicación Java orientada a objetos para organizar productos, inventario y operaciones básicas de una tienda.",
-    intro: "Tienda Nova fue planteado como un ejercicio completo de programación orientada a objetos. El reto consistió en pasar de una descripción del negocio a una estructura de clases comprensible, evitando mezclar la interfaz con toda la lógica. El resultado es una aplicación modular que valida datos y mantiene cada responsabilidad en el lugar correcto.",
-    challenge: "Una tienda necesita registrar y consultar información sin duplicar código ni aceptar datos incompletos. Si toda la lógica se concentra en una sola clase, el proyecto se vuelve difícil de entender, probar y ampliar.",
-    solution: "Una aplicación de escritorio organizada por módulos, con clases para representar las entidades del negocio, métodos para gestionar las operaciones y validaciones antes de registrar cambios.",
-    role: "Participé en el análisis de requisitos, el diseño UML, la creación de clases y métodos, la construcción de la interfaz en NetBeans y la preparación de la documentación y presentación del proyecto.",
+    summary: "Sistema de ventas en Java 17 y Swing para gestionar productos, clientes, ventas, stock, comprobantes, historial y reportes desde una sola aplicación.",
+    intro: "Tienda Nova convierte un proceso manual de ventas en una aplicación de escritorio organizada por capas. El proyecto incluye código fuente, ejecutable JAR, diagrama UML, documentación técnica, comprobantes de demostración, persistencia local, reporte CSV y un video donde se recorren los módulos. La solución fue construida para funcionar en una computadora sin base de datos ni librerías externas.",
+    challenge: "Los registros dispersos dificultan conocer el stock disponible, repetir correctamente los cálculos de subtotal e IGV y reconstruir el historial de una venta. Además, concentrar interfaz y lógica en una sola clase habría hecho el sistema difícil de mantener y probar.",
+    solution: "Una aplicación con inicio de sesión, CRUD de productos y clientes, carrito de venta, validación de existencias, cálculo de subtotal, IGV y total, comprobantes correlativos, historial con anulación y reposición de stock, indicadores y exportación CSV. La arquitectura separa vista, servicio, dominio, persistencia y utilidades.",
+    role: "Desarrollé el análisis del problema, los requisitos, el modelo UML, las clases de dominio, la capa de servicio, la persistencia local y la interfaz Swing. También preparé la documentación, los casos de prueba y la demostración. El sitio muestra capturas del sistema sin publicar el video original ni datos personales visibles en la grabación.",
     theme: "nova",
-    tags: ["Java", "POO", "NetBeans", "UML", "Validaciones"],
-    facts: [["POO", "arquitectura"], ["4", "módulos"], ["5", "etapas documentadas"]],
-    cover: "assets/nova-system.svg",
+    tags: ["Java 17", "Swing", "POO", "NetBeans", "UML", "Persistencia local"],
+    facts: [["23", "archivos fuente Java"], ["11/11", "casos conformes"], ["0", "librerías externas"]],
+    cover: "assets/nova-dashboard.png",
     gallery: [
-      {src:"assets/nova-system.svg", title:"Gestión de inventario", text:"Interfaz de escritorio para consultar, registrar y actualizar productos."},
-      {src:"assets/nova-uml.svg", title:"Modelo de clases", text:"Organización de entidades, atributos, métodos y relaciones del sistema."}
+      {src: "assets/nova-dashboard.png", title: "Panel principal", text: "Captura real de la aplicación con indicadores de ventas, ingresos y productos, además del menú lateral de módulos."},
+      {src: "assets/nova-products.png", title: "Gestión de productos", text: "Formulario y tabla para registrar, consultar, editar, eliminar y buscar productos con categoría, precio, stock y estado."},
+      {src: "assets/nova-reports.png", title: "Reportes e indicadores", text: "Resumen de ventas emitidas, total vendido, clientes registrados, stock bajo y ranking de productos más vendidos."},
+      {src: "assets/nova-uml.png", title: "Diagrama UML entregado", text: "Modelo de clases con herencia, composición, agregación, asociaciones y dependencias entre dominio, servicio y persistencia."}
+    ],
+    evidence: [
+      ["Código", "Proyecto Java completo", "Veintitrés archivos fuente organizados en modelo, servicio, persistencia, utilidades y vista."],
+      ["Pruebas", "Once casos conformes", "Cobertura de acceso, CRUD, validaciones, venta, stock, anulación, persistencia y exportación CSV."],
+      ["Diseño", "UML y arquitectura", "Relaciones y responsabilidades documentadas antes de explicar la implementación."],
+      ["Demostración", "Recorrido funcional", "Video de 2 min 05 s que muestra productos, clientes, nueva venta y reportes; las capturas públicas fueron recortadas para proteger la identidad."]
     ],
     log: [
-      ["Etapa 01", "Análisis de requisitos", "Se identificaron las operaciones de la tienda y los datos necesarios para realizarlas.", "Lista de funcionalidades y reglas."],
-      ["Etapa 02", "Modelado orientado a objetos", "Se separaron las entidades y sus responsabilidades antes de comenzar la interfaz.", "Diagrama UML y estructura de clases."],
-      ["Etapa 03", "Implementación en Java", "Se programaron constructores, atributos, métodos y validaciones usando encapsulamiento.", "Clases funcionales y lógica del sistema."],
-      ["Etapa 04", "Interfaz de escritorio", "Se conectaron formularios, tablas y botones con la lógica desarrollada.", "Pantallas operativas en NetBeans."],
-      ["Etapa 05", "Pruebas y presentación", "Se revisaron casos válidos e inválidos y se organizó la explicación técnica del proyecto.", "Versión final, documentación y guion."]
+      ["Etapa 01", "Problema y alcance", "Se identificaron los riesgos del registro manual: stock incierto, cálculos repetidos y poca trazabilidad.", "Objetivo general, beneficios y límites de la versión académica."],
+      ["Etapa 02", "Requisitos", "Se definieron nueve requisitos funcionales y criterios para usabilidad, portabilidad, mantenibilidad e integridad.", "Matriz de requisitos RF-01 a RF-09."],
+      ["Etapa 03", "Modelado orientado a objetos", "Se diseñaron Persona, Cliente, Producto, Venta, DetalleVenta y Factura con responsabilidades específicas.", "Diagrama UML y justificación de relaciones."],
+      ["Etapa 04", "Arquitectura por capas", "La vista quedó separada de TiendaService, el modelo de dominio, la persistencia y las utilidades.", "Paquetes y dependencias organizados."],
+      ["Etapa 05", "Módulos CRUD", "Se implementaron formularios y tablas para productos y clientes, con búsqueda, validaciones y estados activos o inactivos.", "Paneles Swing conectados a la capa de servicio."],
+      ["Etapa 06", "Flujo de venta", "La aplicación valida cliente y existencias, crea detalles, descuenta stock, calcula importes y emite un comprobante correlativo.", "Venta completa con subtotal, IGV y total."],
+      ["Etapa 07", "Persistencia y reportes", "El estado se serializa primero en un archivo temporal y luego reemplaza el anterior; los resultados también pueden exportarse a CSV.", "Archivo tienda.dat, comprobantes y reporte de ventas."],
+      ["Etapa 08", "Verificación y entrega", "Se compiló con JDK 17 y se comprobaron once escenarios, incluidos duplicados, stock insuficiente, anulación y reapertura del sistema.", "Once casos conformes, documentación y video de demostración."]
     ],
     learnings: [
-      ["Modelar antes de programar", "Definir las responsabilidades de cada clase evitó duplicar lógica durante la implementación."],
-      ["Validar protege el sistema", "Comprobar campos y reglas antes de guardar hace que los datos sean más confiables."],
-      ["Código que se puede explicar", "Una estructura clara facilita presentar el proyecto, encontrar errores y continuar mejorándolo."]
-    ],
-    next: "data"
-  },
-  data: {
-    type: "Base de datos · Proyecto académico",
-    title: "Modelo de datos comercial",
-    summary: "Base de datos relacional diseñada para conectar clientes, productos y ventas con información consistente y consultas útiles.",
-    intro: "Este proyecto aborda la base de cualquier sistema de información: la estructura de sus datos. Antes de escribir SQL se analizaron las reglas del negocio y se definió qué representa cada entidad. El modelo fue normalizado y después traducido a tablas, claves y consultas que permiten trabajar con la información de forma segura.",
-    challenge: "Registrar clientes, productos y ventas sin una estructura adecuada puede generar datos repetidos, relaciones ambiguas y resultados distintos para una misma consulta.",
-    solution: "Un modelo entidad-relación convertido en cinco tablas relacionadas mediante claves primarias y foráneas, normalizado hasta tercera forma normal y acompañado por consultas SQL de registro y análisis.",
-    role: "Trabajé en la identificación de entidades, definición de cardinalidades, normalización de primera a tercera forma normal, creación de tablas, carga de datos de prueba y construcción de consultas.",
-    theme: "data",
-    tags: ["SQL", "Modelo ER", "1FN–3FN", "Consultas", "Integridad"],
-    facts: [["3FN", "normalización"], ["5", "tablas relacionadas"], ["5", "etapas documentadas"]],
-    cover: "assets/data-model.svg",
-    gallery: [
-      {src:"assets/data-model.svg", title:"Modelo entidad-relación", text:"Entidades y relaciones principales antes de traducir el diseño a tablas."},
-      {src:"assets/data-sql.svg", title:"Consultas y resultados", text:"Ejemplo visual del script SQL y una consulta que combina información relacionada."}
-    ],
-    log: [
-      ["Etapa 01", "Reglas del negocio", "Se definió qué información debía almacenarse y cómo se relacionaban las operaciones.", "Diccionario inicial de datos."],
-      ["Etapa 02", "Modelo entidad-relación", "Se identificaron entidades, atributos, claves y cardinalidades.", "Diagrama ER validado."],
-      ["Etapa 03", "Normalización", "Se reorganizaron los atributos para eliminar grupos repetidos y dependencias innecesarias.", "Modelo normalizado hasta 3FN."],
-      ["Etapa 04", "Implementación SQL", "Se crearon tablas, restricciones y registros de prueba respetando el orden de dependencias.", "Script de creación e inserción."],
-      ["Etapa 05", "Consultas y validación", "Se probaron filtros, uniones y agregaciones para comprobar que el modelo respondía correctamente.", "Consultas operativas y resultados revisados."]
-    ],
-    learnings: [
-      ["El modelo define la calidad", "Una consulta clara depende de relaciones y claves bien pensadas desde el inicio."],
-      ["Normalizar con propósito", "La normalización no es solo una regla académica: reduce errores y facilita las actualizaciones."],
-      ["Probar también los datos", "Los registros de prueba ayudaron a detectar relaciones incompletas antes de dar el diseño por terminado."]
-    ],
-    next: "stock"
-  },
-  stock: {
-    type: "Gestión operativa · Proyecto aplicado",
-    title: "StockPilot",
-    summary: "Sistema de inventario pensado para controlar movimientos, detectar faltantes y apoyar decisiones de reposición en un pequeño negocio.",
-    intro: "StockPilot parte de un problema común en comercios pequeños: el inventario suele controlarse en cuadernos o archivos separados y los errores aparecen cuando ya falta un producto. El proyecto plantea una solución trazable, con reglas de negocio, modelo de datos y un tablero operativo. Se trabajó con información ficticia para demostrar el flujo sin exponer datos de una empresa real.",
-    challenge: "Cuando las entradas, ventas y ajustes no quedan conectados, el stock mostrado deja de ser confiable. Esto provoca quiebres, compras urgentes, productos inmovilizados y poca claridad sobre quién realizó cada movimiento.",
-    solution: "Un prototipo técnico con catálogo de productos, proveedores, entradas, salidas, ajustes, stock mínimo y alertas. Cada movimiento actualiza existencias y conserva un historial; el dashboard resume productos críticos, rotación y compras sugeridas.",
-    role: "Definí el alcance, las reglas de inventario y los casos de uso; diseñé el modelo relacional, la interfaz operativa y las consultas para indicadores. También preparé datos ficticios, casos de prueba y una propuesta de evolución hacia una API y control por roles.",
-    theme: "stock",
-    tags: ["Java", "SQL", "Power BI", "Inventario", "Reglas de negocio"],
-    facts: [["6", "módulos"], ["8", "reglas clave"], ["7", "etapas documentadas"]],
-    cover: "assets/stock-dashboard.svg",
-    gallery: [
-      {src:"assets/stock-dashboard.svg", title:"Panel operativo de inventario", text:"Resumen de existencias, alertas de stock mínimo, movimientos recientes y productos que requieren reposición."},
-      {src:"assets/stock-flow.svg", title:"Flujo y arquitectura de datos", text:"Relación entre catálogo, movimientos, existencias y dashboard, con validaciones antes de actualizar el stock."}
-    ],
-    log: [
-      ["Etapa 01", "Contexto y alcance", "Se definió como usuario principal al responsable de almacén de un pequeño comercio y se limitó el alcance a inventario, movimientos y reposición.", "Documento de alcance, usuario y objetivos medibles."],
-      ["Etapa 02", "Reglas de negocio", "Se documentaron reglas para stock mínimo, entradas, salidas, ajustes, productos inactivos, cantidades válidas y movimientos que no pueden dejar existencias negativas.", "Matriz de ocho reglas y casos límite."],
-      ["Etapa 03", "Modelo de datos", "Se separaron productos, categorías, proveedores, usuarios y movimientos para conservar trazabilidad y evitar que el stock dependa de un dato manual aislado.", "Modelo relacional y diccionario de datos."],
-      ["Etapa 04", "Diseño del flujo", "Se organizaron las tareas críticas: registrar producto, recibir mercadería, registrar salida, revisar alertas y preparar una reposición.", "Mapa de navegación y wireframes operativos."],
-      ["Etapa 05", "Lógica y consultas", "Se planteó la actualización transaccional del stock y consultas para identificar faltantes, rotación, valorización y últimos movimientos.", "Pseudocódigo, consultas SQL y validaciones."],
-      ["Etapa 06", "Dashboard y alertas", "Se priorizaron indicadores accionables y se diseñó una alerta que explica qué producto falta, cuánto queda y cuál es la cantidad sugerida.", "Dashboard de control y criterios de alerta."],
-      ["Etapa 07", "Pruebas y mejoras", "Se probaron escenarios con datos ficticios: ingreso, venta, ajuste, duplicado y salida superior al stock disponible. Después se documentaron mejoras futuras.", "Casos de prueba, resultados y hoja de ruta."],
-    ],
-    learnings: [
-      ["El stock es un resultado", "La existencia confiable debe calcularse a partir de movimientos válidos y trazables, no depender de una cifra editada sin contexto."],
-      ["Una alerta debe orientar", "Mostrar un número en rojo no basta: una buena alerta explica el riesgo y propone la siguiente acción."],
-      ["Primero consistencia, luego análisis", "Los indicadores solo son útiles cuando las reglas de registro y el modelo de datos protegen la calidad de la información."]
-    ],
-    next: "farma"
-  },
-  farma: {
-    type: "Analítica geoespacial · Proyecto aplicado",
-    title: "FarmaRadar Perú",
-    summary: "Herramienta para comparar zonas del Perú y estimar la oportunidad de abrir una farmacia mediante datos públicos, ubicación y escenarios de costos.",
-    intro: "FarmaRadar Perú nace de una pregunta empresarial concreta: ¿en qué zona tendría mejores condiciones una nueva farmacia? El proyecto cruza población, farmacias y boticas autorizadas, cercanía a establecimientos de salud, oferta de medicamentos y variables financieras ingresadas por el usuario. El resultado es un análisis por departamento, provincia y distrito con fecha de corte visible. No afirma que una ubicación será rentable: permite comparar escenarios y entender qué supuestos sostienen cada resultado.",
-    challenge: "La población alta por sí sola no demuestra una oportunidad. Una zona puede tener mucha demanda potencial, pero también competencia intensa, alquiler elevado, baja disponibilidad de locales o márgenes insuficientes. Además, las fuentes públicas usan estructuras y fechas distintas que deben normalizarse antes de compararlas.",
-    solution: "Un pipeline en Python que limpia y une datos mediante ubigeo, geocodifica establecimientos y calcula variables espaciales en PostGIS. El dashboard muestra competencia dentro de un radio configurable, población por farmacia autorizada, proximidad a IPRESS, rango de precios, punto de equilibrio y escenarios conservador, base y optimista.",
-    role: "Definí la pregunta de negocio, seleccioné fuentes peruanas verificables, diseñé el modelo geoespacial y documenté la fórmula de rentabilidad estimada. También planteé controles de calidad, supuestos editables, advertencias y una interfaz que permite explicar por qué una zona obtiene determinado puntaje.",
-    theme: "farma",
-    tags: ["Python", "Pandas", "GeoPandas", "PostgreSQL", "PostGIS"],
-    facts: [["4", "fuentes oficiales"], ["5", "variables clave"], ["8", "etapas documentadas"]],
-    cover: "assets/farma-dashboard.svg",
-    gallery: [
-      {src:"assets/farma-dashboard.svg", title:"Mapa de oportunidad y simulador", text:"Comparación de zonas del Perú con filtros territoriales, competencia cercana, demanda potencial y resultado mensual estimado."},
-      {src:"assets/farma-method.svg", title:"Fuentes, modelo y fórmula", text:"Proceso que une datos oficiales, análisis espacial y costos editables antes de calcular escenarios y punto de equilibrio."}
-    ],
-    log: [
-      ["Etapa 01", "Pregunta y alcance", "Se definió que la herramienta compararía oportunidades a nivel de distrito y no recomendaría un local específico sin inspección presencial. La rentabilidad se trataría como escenario, no como certeza.", "Documento de alcance, usuario y límites del análisis."],
-      ["Etapa 02", "Inventario de fuentes", "Se seleccionaron DIGEMID para establecimientos y precios, INEI para población y SUSALUD–RENIPRESS para IPRESS. Para cada fuente se registraron responsable, cobertura y fecha de corte.", "Catálogo de fuentes y matriz de actualización."],
-      ["Etapa 03", "Limpieza territorial", "Se estandarizaron departamento, provincia, distrito y ubigeo; se revisaron duplicados, direcciones incompletas y registros sin coordenadas antes de unir las tablas.", "Pipeline reproducible en Python y reporte de calidad."],
-      ["Etapa 04", "Modelo geoespacial", "Los establecimientos se representaron como puntos y los distritos como áreas. PostGIS permitió contar competidores por radio y calcular distancia a IPRESS cercanas.", "Esquema espacial, consultas y diccionario de variables."],
-      ["Etapa 05", "Índice de oportunidad", "Se combinaron población por farmacia autorizada, competencia cercana, proximidad a IPRESS, disponibilidad/precio y presión de costos. Los pesos quedaron visibles y editables.", "Fórmula documentada y análisis de sensibilidad."],
-      ["Etapa 06", "Escenario financiero", "Se calculó ingreso mensual como tickets por día × ticket promedio × días de atención. El margen bruto menos alquiler, personal, servicios y logística produce el resultado operativo estimado.", "Simulador conservador, base y optimista con punto de equilibrio."],
-      ["Etapa 07", "Mapa y explicación", "La interfaz permite filtrar territorio, comparar zonas y abrir una ficha que explica qué variables elevan o reducen el puntaje, evitando un ranking sin contexto.", "Dashboard geográfico y ficha comparativa por distrito."],
-      ["Etapa 08", "Validación y advertencias", "Se revisaron totales por fuente, coordenadas fuera del distrito, fechas desactualizadas y escenarios extremos. Se añadió una advertencia para validar alquiler, tránsito peatonal, licencias y competencia en campo.", "Checklist de calidad, limitaciones y plan de actualización."],
-    ],
-    learnings: [
-      ["Un puntaje debe poder explicarse", "Una zona no es atractiva solo porque aparece verde: el usuario debe ver las variables, los pesos y la fecha que produjeron el resultado."],
-      ["Los datos públicos no reemplazan el terreno", "Población y competencia orientan la búsqueda, pero alquiler, flujo peatonal, seguridad y permisos necesitan validación local."],
-      ["Rentabilidad significa escenario", "Separar datos observados de supuestos financieros evita presentar una estimación como si fuera una ganancia garantizada."]
-    ],
-    sources: [
-      {label:"DIGEMID", title:"Observatorio de Precios de Medicamentos", text:"Farmacias y boticas autorizadas, ubicación, oferta y comparación de precios por territorio.", url:"https://www.digemid.minsa.gob.pe/webDigemid/notas/2026/consigue-medicamentos-de-calidad-a-bajo-costo-consultando-el-observatorio-de-precios-de-la-digemid/"},
-      {label:"INEI", title:"Población proyectada por distrito", text:"Población territorial usada para construir medidas de demanda potencial y cobertura.", url:"https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib0012/N53/anexo031.htm"},
-      {label:"SUSALUD", title:"Registro Nacional de IPRESS", text:"Ubicación oficial de establecimientos de salud públicos, privados y mixtos del país.", url:"https://datos.susalud.gob.pe/dataset/registro-nacional-de-ipress-renipress"},
-      {label:"DIGEMID", title:"Regulación de establecimientos", text:"Requisito de autorización sanitaria y contexto normativo para farmacias y boticas.", url:"https://www.digemid.minsa.gob.pe/webDigemid/establecimientos/"}
-    ],
-    next: "rumbo"
-  },
-  rumbo: {
-    type: "Movilidad multimodal · Proyecto aplicado",
-    title: "Rumbo Perú",
-    summary: "Aplicación móvil para comparar rutas, duración y costo desde la ubicación actual usando transporte público, taxi por aplicativo, auto, bicicleta o caminata.",
-    intro: "Rumbo Perú nace de una situación cotidiana: saber llegar no siempre ayuda a elegir cómo conviene viajar. Una persona puede preferir la opción más rápida, la más económica o la que requiere menos transbordos. La propuesta reúne esas alternativas en una sola consulta, comienza por Lima y Callao y amplía la cobertura al resto del Perú únicamente cuando existen datos suficientes. Cada resultado indica si el costo proviene de una tarifa oficial, una estimación calculada o una consulta directa al proveedor.",
-    challenge: "Las rutas y los costos no tienen una sola fuente. El transporte público usa tarifas y recorridos oficiales; el taxi por aplicativo cambia según demanda, tránsito y disponibilidad; y el auto propio depende de distancia, rendimiento, combustible y peajes. Además, la cobertura de transporte público no es uniforme en todas las ciudades del Perú.",
-    solution: "Una app móvil con dos campos principales —origen y destino—, detección opcional de ubicación y un comparador ordenado por tiempo, costo o comodidad. OpenTripPlanner combina calles de OpenStreetMap con feeds GTFS disponibles; un servicio de costos añade tarifas públicas, combustible y peajes, mientras los precios dinámicos se confirman al abrir la app del proveedor.",
-    role: "Definí el alcance, los estados de cobertura y las reglas para diferenciar datos oficiales, estimados y dinámicos. Diseñé el flujo móvil, el modelo geoespacial, la estrategia de integración y los casos de prueba. También incorporé privacidad por defecto: la ubicación se usa durante la consulta y el historial solo se guarda con autorización.",
-    theme: "rumbo",
-    tags: ["Flutter", "FastAPI", "OpenTripPlanner", "GTFS", "PostGIS", "OpenStreetMap"],
-    facts: [["5", "medios de viaje"], ["6", "fuentes e integraciones"], ["8", "etapas documentadas"]],
-    cover: "assets/rumbo-comparador.svg",
-    gallery: [
-      {src:"assets/rumbo-comparador.svg", title:"Comparador de viaje", text:"Consulta sencilla desde la ubicación actual y alternativas que explican duración, costo, caminata, transbordos y vigencia del dato."},
-      {src:"assets/rumbo-arquitectura.svg", title:"Cobertura y arquitectura", text:"Proceso para combinar mapas, transporte público y costos sin ocultar cuándo una ciudad o un proveedor no tiene información disponible."}
-    ],
-    log: [
-      ["Etapa 01", "Problema y usuario", "Se entrevistaron escenarios cotidianos: ir a estudiar, trabajar, realizar un trámite y viajar entre ciudades. La necesidad principal fue comparar opciones sin abrir varias aplicaciones.", "Mapa de necesidades, perfiles y decisiones de viaje."],
-      ["Etapa 02", "Cobertura realista", "Se separó Lima y Callao, donde existen fuentes específicas de transporte masivo, del resto del país. Si una ciudad no posee feed público suficiente, la app muestra cobertura parcial en lugar de fabricar una ruta.", "Matriz de cobertura por ciudad, modo y fuente."],
-      ["Etapa 03", "Inventario de datos", "Se documentaron ATU y Línea 1 para tarifas y servicios, GTFS para rutas y paraderos, OpenStreetMap para calles, Uber para precios consultados y Facilito para combustible.", "Catálogo de fuentes, responsables y fechas de actualización."],
-      ["Etapa 04", "Motor multimodal", "OpenTripPlanner combina tramos a pie y transporte público. OSRM calcula auto, bicicleta y caminata; PostGIS conserva paraderos, estaciones, zonas y resultados geográficos.", "Arquitectura técnica y contrato de respuestas de ruta."],
-      ["Etapa 05", "Modelo de costos", "El transporte público usa tarifas vigentes; el auto calcula distancia ÷ rendimiento × precio de combustible más peajes. El taxi por aplicativo se identifica como dinámico y se confirma en el proveedor.", "Reglas de costo, etiquetas de confianza y casos límite."],
-      ["Etapa 06", "Experiencia móvil", "El flujo se redujo a origen, destino y prioridad. Los resultados muestran primero la diferencia útil: cuánto demora, cuánto cuesta, cuánto se camina y cuántos cambios requiere.", "Prototipo en Flutter y sistema de componentes."],
-      ["Etapa 07", "Privacidad y seguridad", "La ubicación precisa se procesa para calcular la consulta y no se publica. Guardar casa, trabajo o historial es opcional, requiere consentimiento y utiliza almacenamiento cifrado.", "Modelo de amenazas, permisos y política de retención."],
-      ["Etapa 08", "Pruebas y monitoreo", "Se probaron ubicaciones sin GPS, destinos ambiguos, pérdida de conexión, tarifas vencidas y rutas fuera de cobertura. La interfaz explica el problema y permite cambiar de alternativa.", "Casos de prueba, estados de error y plan de actualización."],
-    ],
-    learnings: [
-      ["Comparar exige contexto", "La ruta más rápida puede ser costosa y la más barata puede exigir mucha caminata. La app debe mostrar el intercambio, no decidir silenciosamente por el usuario."],
-      ["La cobertura también es un dato", "Decir que una opción no está disponible es más responsable que completar el resultado con horarios o recorridos que no pueden verificarse."],
-      ["El costo tiene distintos niveles de certeza", "Una tarifa pública puede ser exacta, el combustible es una estimación y el taxi por aplicativo cambia al momento de pedirlo; cada valor necesita una etiqueta clara."]
-    ],
-    sources: [
-      {label:"ATU", title:"Tarifarios y datos abiertos de Lima y Callao", text:"Servicios, estaciones, tarifas y conjuntos de datos del Metropolitano y corredores complementarios.", url:"https://portal.atu.gob.pe/QR/"},
-      {label:"LÍNEA 1", title:"Tarifas oficiales del Metro de Lima", text:"Fuente de la tarifa adulta y medio pasaje vigente para los recorridos de la Línea 1.", url:"https://www.lineauno.pe/tarifas/"},
-      {label:"UBER", title:"Estimador oficial de precios", text:"Consulta de precio aproximado según origen, destino, duración, distancia y demanda al momento del viaje.", url:"https://www.uber.com/global/es/price-estimate/"},
-      {label:"OSINERGMIN", title:"Facilito: precios de combustibles", text:"Precios reportados por estación de servicio y departamento para estimar el costo del auto propio.", url:"https://www.facilito.gob.pe/facilito/pages/facilito/buscadorEESS.jsp"},
-      {label:"OPEN DATA", title:"OpenStreetMap y OSRM", text:"Red vial abierta y motor de rutas para auto, bicicleta y caminata en el territorio peruano.", url:"https://project-osrm.org/"},
-      {label:"GTFS / OTP", title:"Estándar y motor multimodal", text:"Modelo de rutas, paraderos, horarios y tarifas usado por OpenTripPlanner para construir itinerarios combinados.", url:"https://www.opentripplanner.org/"}
+      ["Las reglas viven en el servicio", "Centralizar validaciones y operaciones en TiendaService evita que cada pantalla aplique criterios diferentes."],
+      ["Persistir exige integridad", "Escribir primero un archivo temporal reduce el riesgo de dejar el estado incompleto si ocurre un fallo durante el guardado."],
+      ["Las pruebas deben cubrir errores", "Duplicados, documentos inválidos, stock insuficiente y anulaciones demostraron más que un recorrido únicamente exitoso."]
     ],
     next: "lab"
   }
 };
 
 const params = new URLSearchParams(window.location.search);
-const aliases = { finance: "farma", citas: "rumbo" };
-const requestedId = aliases[params.get("id")] || params.get("id");
+const requestedId = params.get("id");
 const id = projects[requestedId] ? requestedId : "lab";
 const project = projects[id];
 const root = document.documentElement;
@@ -231,20 +108,19 @@ document.querySelector("[data-project-challenge]").textContent = project.challen
 document.querySelector("[data-project-solution]").textContent = project.solution;
 document.querySelector("[data-project-role]").textContent = project.role;
 
-const sourcesPanel = document.querySelector("[data-project-sources-panel]");
-if (project.sources?.length) {
-  sourcesPanel.hidden = false;
-  document.querySelector("[data-project-sources]").replaceChildren(...project.sources.map((source) => {
-    const link = document.createElement("a");
-    link.href = source.url;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    const label = document.createElement("span"); label.textContent = source.label;
-    const title = document.createElement("strong"); title.textContent = source.title;
-    const text = document.createElement("p"); text.textContent = source.text;
-    const arrow = document.createElement("i"); arrow.textContent = "Abrir fuente ↗";
-    link.append(label, title, text, arrow);
-    return link;
+const evidencePanel = document.querySelector("[data-project-evidence-panel]");
+if (project.evidence?.length) {
+  evidencePanel.hidden = false;
+  document.querySelector("[data-project-evidence]").replaceChildren(...project.evidence.map(([label, title, description]) => {
+    const item = document.createElement("article");
+    const itemLabel = document.createElement("span");
+    itemLabel.textContent = label;
+    const itemTitle = document.createElement("strong");
+    itemTitle.textContent = title;
+    const itemText = document.createElement("p");
+    itemText.textContent = description;
+    item.append(itemLabel, itemTitle, itemText);
+    return item;
   }));
 }
 
@@ -253,38 +129,54 @@ cover.src = project.cover;
 cover.alt = `Vista principal del proyecto ${project.title}`;
 document.querySelector("[data-project-cover-link]").href = project.cover;
 
-document.querySelector("[data-project-tags]").replaceChildren(...project.tags.map(tag => {
-  const span = document.createElement("span"); span.textContent = tag; return span;
+document.querySelector("[data-project-tags]").replaceChildren(...project.tags.map((tag) => {
+  const span = document.createElement("span");
+  span.textContent = tag;
+  return span;
 }));
 
-document.querySelector("[data-project-facts]").replaceChildren(...project.facts.map(([value,label]) => {
+document.querySelector("[data-project-facts]").replaceChildren(...project.facts.map(([value, label]) => {
   const item = document.createElement("div");
-  const strong = document.createElement("strong"); strong.textContent = value;
-  const span = document.createElement("span"); span.textContent = label;
-  item.append(strong, span); return item;
+  const strong = document.createElement("strong");
+  strong.textContent = value;
+  const span = document.createElement("span");
+  span.textContent = label;
+  item.append(strong, span);
+  return item;
 }));
 
-document.querySelector("[data-project-gallery]").replaceChildren(...project.gallery.map((item,index) => {
+document.querySelector("[data-project-gallery]").replaceChildren(...project.gallery.map((item, index) => {
   const figure = document.createElement("figure");
-  const link = document.createElement("a"); link.href = item.src; link.target = "_blank"; link.rel = "noopener noreferrer";
-  const image = document.createElement("img"); image.src = item.src; image.alt = `${item.title} de ${project.title}`; image.loading = index ? "lazy" : "eager";
-  const badge = document.createElement("span"); badge.textContent = "Ampliar imagen";
-  link.append(image,badge);
+  const link = document.createElement("a");
+  link.href = item.src;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  const image = document.createElement("img");
+  image.src = item.src;
+  image.alt = `${item.title} de ${project.title}`;
+  image.loading = index ? "lazy" : "eager";
+  const badge = document.createElement("span");
+  badge.textContent = "Ampliar imagen";
+  link.append(image, badge);
   const caption = document.createElement("figcaption");
-  const title = document.createElement("strong"); title.textContent = item.title;
-  const text = document.createElement("p"); text.textContent = item.text;
-  caption.append(title,text); figure.append(link,caption); return figure;
+  const title = document.createElement("strong");
+  title.textContent = item.title;
+  const text = document.createElement("p");
+  text.textContent = item.text;
+  caption.append(title, text);
+  figure.append(link, caption);
+  return figure;
 }));
 
-document.querySelector("[data-project-log]").replaceChildren(...project.log.map(([stage,title,text,output]) => {
+document.querySelector("[data-project-log]").replaceChildren(...project.log.map(([stage, title, text, output]) => {
   const article = document.createElement("article");
   article.innerHTML = `<div class="timeline-marker"></div><span>${stage}</span><h3>${title}</h3><p>${text}</p><div class="timeline-output"><b>Entregable</b>${output}</div>`;
   return article;
 }));
 
-document.querySelector("[data-project-learnings]").replaceChildren(...project.learnings.map(([title,text],index) => {
+document.querySelector("[data-project-learnings]").replaceChildren(...project.learnings.map(([title, text], index) => {
   const article = document.createElement("article");
-  article.innerHTML = `<span>0${index+1}</span><h3>${title}</h3><p>${text}</p>`;
+  article.innerHTML = `<span>0${index + 1}</span><h3>${title}</h3><p>${text}</p>`;
   return article;
 }));
 

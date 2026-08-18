@@ -8,12 +8,19 @@ Portafolio profesional de Brayan Borja, enfocado en Ingeniería de Sistemas, des
 - Tema claro y oscuro con preferencia persistente.
 - Navegación accesible y animaciones respetuosas con `prefers-reduced-motion`.
 - Casos de estudio completos con imágenes ampliables y bitácoras por etapas.
-- Galería vectorial propia para seis casos de estudio académicos y aplicados.
-- Proyectos de inventario, analítica farmacéutica geoespacial y movilidad multimodal con bitácoras profesionales.
+- Solo dos proyectos reales y documentados: Lab Nutrition y Tienda Nova.
+- Evidencia obtenida del código, documentación, pruebas y demostraciones entregadas.
 - Perfil profesional con formación, áreas de interés y disponibilidad.
 - Correo profesional protegido contra rastreadores básicos y sin número personal publicado.
 - Política de referencias restrictiva y Content Security Policy para limitar recursos no autorizados.
 - Sitio estático sin dependencias ni proceso de compilación.
+
+## Proyectos
+
+- **Lab Nutrition:** prototipo logístico creado con Figma, JavaScript y Figma Plugin API; incluye nueve pantallas y resultados de una prueba de usabilidad con cuatro participantes.
+- **Tienda Nova:** aplicación de escritorio en Java 17 y Swing; incluye gestión de productos, clientes, ventas, stock, comprobantes, persistencia local y reportes.
+
+Los documentos originales, videos y archivos de trabajo que contienen nombres, códigos u otros datos personales no se publican en el sitio.
 
 ## Ejecutar localmente
 
@@ -37,16 +44,11 @@ Luego visita `http://localhost:8000`.
 ├── assets/
 │   ├── lab-dashboard.svg
 │   ├── lab-prototype.svg
-│   ├── nova-system.svg
-│   ├── nova-uml.svg
-│   ├── data-model.svg
-│   ├── data-sql.svg
-│   ├── stock-dashboard.svg
-│   ├── stock-flow.svg
-│   ├── farma-dashboard.svg
-│   ├── farma-method.svg
-│   ├── rumbo-comparador.svg
-│   └── rumbo-arquitectura.svg
+│   ├── lab-roadmap.png
+│   ├── nova-dashboard.png
+│   ├── nova-products.png
+│   ├── nova-reports.png
+│   └── nova-uml.png
 └── favicon.svg
 ```
 
