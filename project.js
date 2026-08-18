@@ -10,6 +10,14 @@ const projects = {
     theme: "lab",
     tags: ["Figma", "JavaScript", "Figma Plugin API", "UX/UI", "Pruebas de usabilidad"],
     facts: [["9", "pantallas interactivas"], ["4/4", "tareas completadas"], ["22,5 s", "tiempo promedio"]],
+    stack: {
+      title: "Tecnologías usadas en Lab Nutrition.",
+      note: "El proyecto combina construcción visual, lógica de interacción y evaluación de usabilidad; no utiliza un backend ni un framework web.",
+      groups: [
+        ["Interfaz y prototipo", ["Figma", "Componentes y variantes", "Variables y estilos", "Prototipo interactivo"]],
+        ["Lógica y validación", ["JavaScript", "Figma Plugin API", "Atomic Design", "Pruebas de usabilidad"]]
+      ]
+    },
     cover: "assets/lab-dashboard.svg",
     gallery: [
       {src: "assets/lab-dashboard.svg", title: "Dashboard logístico", text: "Vista reconstruida a partir de los datos de demostración definidos en el código: cuatro marcas registradas, una compra pendiente y una aprobada."},
@@ -50,6 +58,14 @@ const projects = {
     theme: "nova",
     tags: ["Java 17", "Swing", "POO", "NetBeans", "UML", "Persistencia local"],
     facts: [["23", "archivos fuente Java"], ["11/11", "casos conformes"], ["0", "librerías externas"]],
+    stack: {
+      title: "Tecnologías usadas en Tienda Nova.",
+      note: "Aplicación de escritorio desarrollada sin frameworks web, base de datos ni librerías externas.",
+      groups: [
+        ["Interfaz", ["Java 17", "Java Swing", "NetBeans", "Formularios y tablas"]],
+        ["Lógica y persistencia", ["POO", "TiendaService", "Serialización local", "Archivos CSV"]]
+      ]
+    },
     cover: "assets/nova-dashboard.png",
     gallery: [
       {src: "assets/nova-dashboard.png", title: "Panel principal", text: "Captura real de la aplicación con indicadores de ventas, ingresos y productos, además del menú lateral de módulos."},
@@ -107,6 +123,31 @@ document.querySelector("[data-project-intro]").textContent = project.intro;
 document.querySelector("[data-project-challenge]").textContent = project.challenge;
 document.querySelector("[data-project-solution]").textContent = project.solution;
 document.querySelector("[data-project-role]").textContent = project.role;
+
+const stackPanel = document.querySelector("[data-project-stack-panel]");
+if (project.stack?.groups?.length) {
+  stackPanel.hidden = false;
+  stackPanel.dataset.stackTheme = project.theme;
+  document.querySelector("[data-project-stack-title]").textContent = project.stack.title;
+  document.querySelector("[data-project-stack-note]").textContent = project.stack.note;
+  document.querySelector("[data-project-stack]").replaceChildren(...project.stack.groups.map(([label, technologies], groupIndex) => {
+    const article = document.createElement("article");
+    const groupLabel = document.createElement("h4");
+    groupLabel.textContent = label;
+    const list = document.createElement("ul");
+    list.replaceChildren(...technologies.map((technology, technologyIndex) => {
+      const item = document.createElement("li");
+      const number = document.createElement("span");
+      number.textContent = String(groupIndex * 4 + technologyIndex + 1).padStart(2, "0");
+      const name = document.createElement("strong");
+      name.textContent = technology;
+      item.append(number, name);
+      return item;
+    }));
+    article.append(groupLabel, list);
+    return article;
+  }));
+}
 
 const evidencePanel = document.querySelector("[data-project-evidence-panel]");
 if (project.evidence?.length) {
